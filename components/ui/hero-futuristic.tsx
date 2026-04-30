@@ -12,7 +12,7 @@ const WebGLShader = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7EF] via-[#0066B3]/20 to-[#C5312E]/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7EF] via-[#C5312E]/5 to-[#C5312E]/10" />
     ),
   },
 );
@@ -141,13 +141,13 @@ export const HeroFuturistic = () => {
           <GlassContainer
             className="h-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-auto transition-transform duration-500 group-hover:scale-[1.02]"
             containerClassName="h-full"
-            glowColor="blue"
+            glowColor="red"
           >
             <div className="relative h-full w-full overflow-hidden">
               {heroEvents.map((event, idx) => (
                 <div
                   key={event.title}
-                  className={`absolute inset-0 bg-[#0a0a0d] transition-opacity duration-700 ease ${idx === activeSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+                  className={`absolute inset-0 bg-white transition-opacity duration-700 ease ${idx === activeSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
                 >
                   <Image
                     src={event.image}
@@ -167,7 +167,7 @@ export const HeroFuturistic = () => {
                   />
                 </div>
               ))}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20 z-20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-(--brand-red)/80 via-(--brand-red)/30 to-transparent z-20" />
 
               <div className="absolute bottom-8 left-8 right-8 space-y-2 z-30">
                 <span
