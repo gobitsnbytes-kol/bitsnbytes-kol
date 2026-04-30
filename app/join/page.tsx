@@ -93,24 +93,24 @@ export default function Join() {
     <>
       {/* Hero Section */}
       <section
-        className="relative min-h-[40vh] sm:min-h-[50vh] flex items-center justify-center overflow-hidden text-white pt-24 md:pt-32"
+        className="relative min-h-[40vh] sm:min-h-[50vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32 bg-[#FAF7EF]"
         aria-labelledby="join-hero-title"
       >
         <WebGLShader />
         <div className="relative z-10 w-full mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12 md:py-24">
             <div className="px-6 py-12 md:py-20 sm:px-10 lg:px-16 text-center">
             <div className="flex flex-col items-center gap-6">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.35em] font-semibold text-white/90 backdrop-blur-md shadow-inner">
+              <span className="inline-flex items-center gap-2 rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs uppercase tracking-[0.35em] font-semibold text-foreground/90 backdrop-blur-md shadow-inner">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-(--brand-red) opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-(--brand-red)" />
                 </span>
                 Applications Open
               </span>
-              <h1 id="join-hero-title" className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight font-black text-white tracking-tighter drop-shadow-2xl">
+              <h1 id="join-hero-title" className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight font-black text-foreground tracking-tighter drop-shadow-2xl">
                 Join the crew
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-medium">
+              <p className="text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed font-medium">
                 Tell us how you want to build with Bits & Bytes Kolkata. We'll
                 connect you with squads, mentors, and live projects.
               </p>
@@ -125,7 +125,7 @@ export default function Join() {
           <div className="mx-auto w-full max-w-3xl space-y-6 sm:space-y-8">
             <GlassContainer className="p-8 md:p-12 text-center" glowColor="both">
               <div className="flex flex-col items-center gap-6">
-                <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-white/60 font-bold uppercase tracking-widest">
+                <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-foreground/60 font-bold uppercase tracking-widest">
                   <Clock className="h-4 w-4 text-(--brand-red)" />
                   <span>Takes less than 2 minutes</span>
                 </div>
@@ -145,7 +145,7 @@ export default function Join() {
                   </a>
                 </Button>
 
-                <p className="text-sm text-white/50 font-medium">
+                <p className="text-sm text-foreground/50 font-medium">
                   We review applications weekly · You&apos;ll hear back within 7 days
                 </p>
               </div>
@@ -169,14 +169,14 @@ export default function Join() {
                 glowColor={index % 2 === 0 ? "pink" : "purple"}
               >
                 <div className="flex items-start gap-4 md:gap-6">
-                  <div className="flex h-12 w-12 md:h-14 md:w-14 shrink-0 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-(--brand-red) shadow-inner">
+                  <div className="flex h-12 w-12 md:h-14 md:w-14 shrink-0 items-center justify-center rounded-2xl bg-foreground/5 border border-foreground/10 text-(--brand-red) shadow-inner">
                     <benefit.icon className="h-6 w-6 md:h-7 md:w-7" />
                   </div>
                   <div className="min-w-0">
-                    <h3 className="font-display text-xl md:text-2xl font-black text-white">
+                    <h3 className="font-display text-xl md:text-2xl font-black text-foreground">
                       {benefit.title}
                     </h3>
-                    <p className="mt-2 text-base text-white/70 font-medium leading-relaxed">
+                    <p className="mt-2 text-base text-foreground/70 font-medium leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -199,7 +199,7 @@ export default function Join() {
                 {expectations.map((expectation, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-4 text-base md:text-lg text-white font-medium"
+                    className="flex items-start gap-4 text-base md:text-lg text-foreground font-medium"
                   >
                     <CheckCircle2 className="h-6 w-6 shrink-0 text-(--brand-red) mt-0.5" />
                     <span>{expectation}</span>
@@ -224,10 +224,10 @@ export default function Join() {
                 className="p-6 md:p-8"
                 glowColor="none"
               >
-                <h3 className="font-display text-lg md:text-xl font-black text-white">
+                <h3 className="font-display text-lg md:text-xl font-black text-foreground">
                   {faq.question}
                 </h3>
-                <p className="mt-3 text-base text-white/60 font-medium leading-relaxed">
+                <p className="mt-3 text-base text-foreground/60 font-medium leading-relaxed">
                   {faq.answer}
                 </p>
               </GlassContainer>
@@ -238,10 +238,10 @@ export default function Join() {
         {/* Final CTA */}
         <PageSection align="center">
           <div className="mx-auto max-w-2xl text-center space-y-4 sm:space-y-6">
-            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-white">
+            <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground">
               Ready to start building?
             </h2>
-            <p className="text-sm sm:text-base text-white/70 px-4 sm:px-0">
+            <p className="text-sm sm:text-base text-foreground/70 px-4 sm:px-0">
               Join 1500+ teen builders who are shipping real projects and growing
               together.
             </p>
@@ -259,7 +259,7 @@ export default function Join() {
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
-            <p className="text-xs sm:text-sm text-white/60">
+            <p className="text-xs sm:text-sm text-foreground/60">
               Questions? Reach us at{" "}
               <a
                 href="mailto:kolkata@bitsnbytes.org"
@@ -274,7 +274,3 @@ export default function Join() {
     </>
   );
 }
-
-
-
-

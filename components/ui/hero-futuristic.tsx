@@ -12,7 +12,7 @@ const WebGLShader = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7EF] via-[#0066B3]/20 to-[#C5312E]/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7EF] via-[#C5312E]/5 to-[#C5312E]/10" />
     ),
   },
 );
@@ -29,11 +29,11 @@ const heroEvents = [
   {
     image: "/images/github-copilot-hero-desktop.png",
     imageMobile: "/images/github-copilot-hero-mobile.png",
-    alt: "GitHub Copilot Dev Days | Kolkata",
+    alt: "GitHub Copilot Dev Days | Lucknow",
     badge: "Upcoming Event",
     status: "upcoming",
     title: "GitHub Copilot Dev Days",
-    subtitle: "Coming Soon · Kolkata",
+    subtitle: "Coming Soon · Lucknow",
     href: "/events",
   },
   {
@@ -62,7 +62,7 @@ export const HeroFuturistic = () => {
 
   return (
     <section
-      className="relative overflow-hidden rounded-b-[1.5rem] sm:rounded-b-[2rem] md:rounded-b-[3rem] lg:rounded-b-[3.5rem] text-foreground w-full max-w-full"
+      className="relative overflow-hidden rounded-b-[1.5rem] sm:rounded-b-[2rem] md:rounded-b-[3rem] lg:rounded-b-[3.5rem] text-foreground w-full max-w-full bg-[#FAF7EF]"
       aria-labelledby="home-hero-title"
     >
       <WebGLShader />
@@ -76,7 +76,7 @@ export const HeroFuturistic = () => {
           >
             <div className="flex flex-col h-full gap-6 sm:gap-8 md:gap-10">
               {/* Teen-led badge */}
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-3 py-1 sm:px-4 sm:py-1.5 text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.25em] sm:tracking-[0.35em] text-foreground/80 backdrop-blur-md shadow-inner">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-foreground/20 bg-white/80 px-3 py-1 sm:px-4 sm:py-1.5 text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.25em] sm:tracking-[0.35em] text-foreground/80 backdrop-blur-md shadow-sm">
                 <Sparkles className="h-3 w-3 text-(--brand-red)" />
                 TEEN-LED
               </span>
@@ -107,7 +107,7 @@ export const HeroFuturistic = () => {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full sm:flex-1 h-12 sm:h-14 px-6 sm:px-8 rounded-full border-foreground/20 bg-foreground/5 text-sm sm:text-base font-semibold text-foreground backdrop-blur-md hover:bg-foreground/10 transition-transform transition-colors transition-opacity hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-white/20"
+                  className="w-full sm:flex-1 h-12 sm:h-14 px-6 sm:px-8 rounded-full border-foreground/20 bg-white/80 text-sm sm:text-base font-semibold text-foreground backdrop-blur-md hover:bg-white transition-transform transition-colors transition-opacity hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-white/20 shadow-sm"
                 >
                   <Link href="/impact" className="flex items-center justify-center">See what we&apos;ve built</Link>
                 </Button>
@@ -141,13 +141,13 @@ export const HeroFuturistic = () => {
           <GlassContainer
             className="h-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-auto transition-transform duration-500 group-hover:scale-[1.02]"
             containerClassName="h-full"
-            glowColor="blue"
+            glowColor="red"
           >
             <div className="relative h-full w-full overflow-hidden">
               {heroEvents.map((event, idx) => (
                 <div
                   key={event.title}
-                  className={`absolute inset-0 bg-[#0a0a0d] transition-opacity duration-700 ease ${idx === activeSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+                  className={`absolute inset-0 bg-white transition-opacity duration-700 ease ${idx === activeSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
                 >
                   <Image
                     src={event.image}
@@ -167,7 +167,7 @@ export const HeroFuturistic = () => {
                   />
                 </div>
               ))}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20 z-20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-(--brand-red)/80 via-(--brand-red)/30 to-transparent z-20" />
 
               <div className="absolute bottom-8 left-8 right-8 space-y-2 z-30">
                 <span
@@ -215,4 +215,3 @@ export const HeroFuturistic = () => {
 };
 
 export default HeroFuturistic;
-

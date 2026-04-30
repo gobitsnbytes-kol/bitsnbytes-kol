@@ -34,7 +34,7 @@ export function Features() {
                         className="overflow-hidden p-8 md:p-12"
                         glowColor="blue"
                     >
-                        <div className="relative mx-auto flex aspect-square size-32 rounded-3xl border border-foreground/10 bg-foreground/5 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <div className="relative mx-auto flex aspect-square size-32 rounded-3xl border border-foreground/10 bg-white/80 transition-transform group-hover:scale-110 group-hover:rotate-3 shadow-inner">
                             <Lightbulb className="m-auto h-14 w-14 text-(--brand-red)" />
                         </div>
                         <div className="relative z-10 mt-10 space-y-3 text-center">
@@ -92,7 +92,7 @@ export function Features() {
                     >
                         <div className="grid sm:grid-cols-2 h-full">
                             <div className="relative z-10 flex flex-col justify-between space-y-12 h-full">
-                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-foreground/5 transition-transform group-hover:scale-110">
+                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-white/80 transition-transform group-hover:scale-110 shadow-inner">
                                     <Rocket className="m-auto size-7 text-(--brand-red)" />
                                 </div>
                                 <div className="space-y-4">
@@ -100,7 +100,7 @@ export function Features() {
                                     <p className="text-base text-foreground/60 font-medium leading-relaxed">Building the labs of tomorrow with AI, distributed systems, and creative code.</p>
                                 </div>
                             </div>
-                            <div className="rounded-3xl relative -mb-12 -mr-12 mt-8 sm:mt-0 h-full min-h-[200px] border-l border-t border-foreground/10 bg-foreground/5 p-8 sm:ml-8 overflow-hidden">
+                            <div className="rounded-3xl relative -mb-12 -mr-12 mt-8 sm:mt-0 h-full min-h-[200px] border-l border-t border-foreground/10 bg-white/50 p-8 sm:ml-8 overflow-hidden">
                                 <div className="absolute left-6 top-4 flex gap-1.5">
                                     <span className="block size-2.5 rounded-full border border-foreground/10 bg-red-500/50"></span>
                                     <span className="block size-2.5 rounded-full border border-foreground/10 bg-yellow-500/50"></span>
@@ -126,7 +126,7 @@ export function Features() {
                     >
                         <div className="grid sm:grid-cols-2 h-full">
                             <div className="relative z-10 flex flex-col justify-between space-y-12 h-full">
-                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-foreground/5 transition-transform group-hover:scale-110">
+                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-white/80 transition-transform group-hover:scale-110 shadow-inner">
                                     <Users className="m-auto size-7 text-(--brand-red)" />
                                 </div>
                                 <div className="space-y-4">
@@ -137,28 +137,28 @@ export function Features() {
                             <div className="before:bg-foreground/10 relative mt-10 sm:mt-0 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-12 sm:-mr-12">
                                 <div className="relative flex h-full flex-col justify-center space-y-8 py-12">
                                     <div className="relative flex w-[calc(50%+1.5rem)] items-center justify-end gap-3 transition-transform hover:scale-105">
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Shoryavardhaan Gupta</span>
-                                        <div className="ring-(--brand-blue)/30 size-12 ring-2 rounded-2xl overflow-hidden border border-foreground/20">
-                                            <Image className="size-full object-cover" src="/team/shorya.png" alt="Shorya" width={48} height={48} />
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Shoryavardhaan Gupta</span>
+                                        <div className="ring-(--brand-blue)/30 size-12 ring-2 rounded-full overflow-hidden border border-foreground/20">
+                                            <Image className="size-full object-cover" src="https://avatars.githubusercontent.com/u/108920197?v=4" alt="Shorya" width={48} height={48} />
                                         </div>
                                     </div>
                                     <div className="relative ml-[calc(50%-1.25rem)] flex items-center gap-3 transition-transform hover:scale-105">
-                                        <div className="ring-foreground/10 size-14 ring-2 rounded-2xl overflow-hidden border border-foreground/20">
+                                        <div className="ring-foreground/10 size-14 ring-2 rounded-full overflow-hidden border border-foreground/20">
                                             <Image className="size-full object-cover" src="/team/yash.jpeg" alt="Yash" width={56} height={56} />
                                         </div>
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Yash Singh</span>
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Yash Singh</span>
                                     </div>
                                     <div className="relative flex w-[calc(50%+1.5rem)] items-center justify-end gap-3 transition-transform hover:scale-105">
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Akshat Kushwaha</span>
-                                        <div className="ring-foreground/10 size-12 ring-2 rounded-2xl overflow-hidden border border-foreground/20">
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Akshat Kushwaha</span>
+                                        <div className="ring-foreground/10 size-12 ring-2 rounded-full overflow-hidden border border-foreground/20">
                                             <Image className="size-full object-cover" src="/team/akshat.jpg" alt="Akshat" width={48} height={48} />
                                         </div>
                                     </div>
                                     <div className="relative ml-[calc(50%-1.25rem)] flex items-center gap-3 transition-transform hover:scale-105">
-                                        <div className="ring-foreground/10 size-12 ring-2 rounded-2xl overflow-hidden border border-foreground/20">
+                                        <div className="ring-foreground/10 size-12 ring-2 rounded-full overflow-hidden border border-foreground/20">
                                             <Image className="size-full object-cover" src="/team/aadrika.png" alt="Aadrika" width={48} height={48} />
                                         </div>
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Aadrika Maurya</span>
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Aadrika Maurya</span>
                                     </div>
                                 </div>
                             </div>
@@ -169,4 +169,3 @@ export function Features() {
         </div>
     )
 }
-

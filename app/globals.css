@@ -43,7 +43,7 @@
 
     --glow-strong: 0 20px 70px rgba(197, 49, 46, 0.15);
     --glow-soft: 0 10px 32px rgba(0, 102, 179, 0.12);
-    --shadow-card: 0 12px 40px rgba(2, 5, 16, 0.06), 0 0 0 1px rgba(2, 5, 16, 0.04);
+    --shadow-card: 0 12px 40px rgba(197, 49, 46, 0.03), 0 0 0 1px rgba(197, 49, 46, 0.02);
 
     --chart-1: oklch(0.646 0.222 41.116);
     --chart-2: oklch(0.6 0.118 184.704);
@@ -227,7 +227,7 @@
 
     .glass-card {
         background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(197, 49, 46, 0.08) inset;
+        box-shadow: 0 4px 20px rgba(197, 49, 46, 0.02), 0 0 0 1px rgba(197, 49, 46, 0.08) inset;
         @apply rounded-3xl border border-(--brand-red)/5;
         /* Use transform instead of translate for better GPU acceleration */
         transform: translateY(0) translateZ(0);
@@ -650,4 +650,3 @@
         @apply relative overflow-hidden rounded-3xl border border-foreground/10 bg-white/60 backdrop-blur-xl transition-all duration-300 hover:border-(--brand-blue)/30 hover:shadow-2xl hover:shadow-(--brand-blue)/5;
     }
 }
-

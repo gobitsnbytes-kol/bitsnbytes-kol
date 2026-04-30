@@ -29,13 +29,13 @@ const WebGLShader = dynamic(
 // ── Component ─────────────────────────────────────────────────────────────
 
 export default function Events() {
-  const [activeEvent, setActiveEvent] = useState<"all" | "copilot" | "execron" | "india-innovates">("all");
+  const [activeEvent, setActiveEvent] = useState<"all" | "lucknow-build" | "copilot" | "execron" | "india-innovates">("all");
 
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[72vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32"
+        className="relative min-h-[72vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32 bg-[#FAF7EF]"
         aria-labelledby="events-hero-title"
       >
         <WebGLShader />
@@ -82,6 +82,18 @@ export default function Events() {
           </button>
           <button
             type="button"
+            onClick={() => setActiveEvent("lucknow-build")}
+            aria-selected={activeEvent === "lucknow-build"}
+            role="tab"
+            className={`rounded-full px-5 py-2.5 text-sm font-bold transition-transform transition-colors transition-opacity ${activeEvent === "lucknow-build"
+              ? "bg-(--brand-red) text-white shadow-lg"
+              : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
+              }`}
+          >
+            Archived: Lucknow Build Guild
+          </button>
+          <button
+            type="button"
             onClick={() => setActiveEvent("copilot")}
             aria-selected={activeEvent === "copilot"}
             role="tab"
@@ -118,11 +130,120 @@ export default function Events() {
           </button>
         </div>
 
+        {/* ── Lucknow Build Guild ───────────────────────────────────────── */}
+        {(activeEvent === "all" || activeEvent === "lucknow-build") && (
+          <PageSection
+            eyebrow="Archived · Apr 19, 2026"
+            title="Lucknow Build Guild"
+            description="Free hardware workshop and meetup in Lucknow."
+          >
+            <GlassContainer glowColor="pink" animated={false} className="overflow-hidden">
+
+              {/* ── Banner image header ── */}
+              <div className="relative w-full overflow-hidden rounded-t-[2.25rem] bg-foreground/5 flex items-center justify-center min-h-[320px] border-b border-foreground/10">
+                <div className="text-center p-8">
+                  <div className="inline-flex items-center justify-center p-4 rounded-full bg-foreground/5 border border-foreground/10 mb-4">
+                    <Building2 className="h-12 w-12 text-(--brand-red)" />
+                  </div>
+                  <h3 className="text-2xl font-black tracking-tight text-foreground mb-2">Lucknow Build Guild</h3>
+                  <p className="text-foreground/60 font-medium">Free hardware workshop and meetup in Lucknow.</p>
+                </div>
+              </div>
+
+              {/* ── Details ── */}
+              <div className="p-6 sm:p-8 md:p-10">
+                <div className="flex flex-wrap items-center gap-2 mb-8">
+                  <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold text-foreground bg-(--brand-red)">
+                    Archived Event
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
+                    Sponsored* by Bits&Bytes
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="prose max-w-none text-foreground/80 space-y-6 lg:col-span-2">
+                    <div>
+                      <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
+                      <p>
+                        We hosted <strong>Lucknow Build Guild</strong>, a free hardware workshop and meetup on 19 April at SureStay by Best Western. The event was designed to help participants explore hands-on hardware building, connect with like-minded builders, and learn through community-driven sessions.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h2 className="text-xl font-bold text-foreground mb-2">What the meetup focused on</h2>
+                      <ul className="list-disc pl-5 space-y-1">
+                        <li>Hands-on hardware building and practical workflows.</li>
+                        <li>Community networking with local tech enthusiasts.</li>
+                        <li>Open peer learning with an in-person builder crowd.</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h2 className="text-xl font-bold text-foreground mb-2">Host</h2>
+                      <p>
+                        Event host: <strong>Shaurya</strong>. Explore: <Link href="https://linktr.ee/shaurya" target="_blank" className="text-(--brand-red) hover:underline">Linktree</Link> and <Link href="https://github.com/shaurya" target="_blank" className="text-(--brand-red) hover:underline">GitHub</Link>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div className="space-y-0 divide-y divide-white/10 rounded-2xl border border-foreground/10 bg-foreground/5 overflow-hidden">
+                      {[
+                        { icon: <Calendar className="h-4 w-4 text-(--brand-red)" />, label: "Date", value: "Apr 19, 2026" },
+                        { icon: <MapPin className="h-4 w-4 text-(--brand-red)" />, label: "Venue", value: "SureStay by Best Western, Lucknow" },
+                        { icon: <Users className="h-4 w-4 text-(--brand-red)" />, label: "Format", value: "Free Hardware Workshop & Meetup" },
+                        { icon: <Check className="h-4 w-4 text-(--brand-red)" />, label: "Status", value: "Archived" },
+                      ].map((s) => (
+                        <div key={s.label} className="flex items-center justify-between px-5 py-3.5">
+                          <div className="flex items-center gap-2.5">
+                            {s.icon}
+                            <span className="text-sm text-foreground/60 font-medium">{s.label}</span>
+                          </div>
+                          <span className="text-sm font-black text-foreground text-right">{s.value}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button
+                      asChild
+                      className="w-full rounded-2xl bg-foreground/10 border border-foreground/20 py-5 text-sm font-bold text-foreground hover:bg-white/20 transition-colors"
+                    >
+                      <Link
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Visit Event Website
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="mt-16 border-t border-foreground/10 pt-12">
+                  <Gallery4
+                    title="In Pictures"
+                    description=""
+                    items={[
+                      { id: "lb-1", title: "Lucknow Build Guild", description: "", href: "#", image: "/event_pictures/devday.jpeg" },
+                      { id: "lb-2", title: "Lucknow Build Guild", description: "", href: "#", image: "/event_pictures/devday2.jpeg" },
+                      { id: "lb-3", title: "Lucknow Build Guild", description: "", href: "#", image: "/event_pictures/devday3.jpeg" },
+                      { id: "lb-4", title: "Lucknow Build Guild", description: "", href: "#", image: "/event_pictures/devday4.jpeg" },
+                      { id: "lb-5", title: "Lucknow Build Guild", description: "", href: "#", image: "/event_pictures/founder-s.jpeg" }
+                    ]}
+                  />
+                </div>
+              </div>
+            </GlassContainer>
+          </PageSection>
+        )}
+
         {/* ── GitHub Copilot Dev Days — Featured Spotlight ──────────────── */}
         {(activeEvent === "all" || activeEvent === "copilot") && (
           <PageSection
             eyebrow="Archived · Apr 19"
-            title="GitHub Copilot Dev Days | Kolkata"
+            title="GitHub Copilot Dev Days | Lucknow"
             description="AI-Assisted Coding with GitHub Copilot — A Community Developer Event."
           >
             <GlassContainer glowColor="pink" animated={false} className="overflow-hidden">
@@ -131,7 +252,7 @@ export default function Events() {
               <div className="relative w-full overflow-hidden rounded-t-[2.25rem] bg-foreground/5">
                 <Image
                   src="/images/copilot-dev-day.png"
-                  alt="GitHub Copilot Dev Days | Kolkata"
+                  alt="GitHub Copilot Dev Days | Lucknow"
                   width={1920}
                   height={640}
                   className="w-full h-auto object-cover"
@@ -147,17 +268,17 @@ export default function Events() {
                     Archived Event
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
-                    Hosted by Bits & Bytes Kolkata
+                    Hosted by Bits&Bytes
                   </span>
                 </div>
 
                 {/* Stats + details two-column */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6 lg:col-span-2">
+                  <div className="prose max-w-none text-foreground/80 space-y-6 lg:col-span-2">
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
-                        <strong>GitHub Copilot Dev Days</strong> was a community developer event in Kolkata that brought together students, developers, and technology enthusiasts to explore how AI-assisted development works in real projects.
+                        <strong>GitHub Copilot Dev Days</strong> was a community developer event in <strong>Lucknow</strong> that brought together students, developers, and technology enthusiasts to explore how AI-assisted development works in real projects.
                       </p>
                     </div>
 
@@ -174,7 +295,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Partners & Details</h2>
                       <p>
-                        The event was hosted by <strong>Bits & Bytes Kolkata</strong>, with community partners including <strong>Coding Connoisseurs</strong>, <strong>Aryan Singh</strong>, and <strong>Notion Kolkata</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
+                        The event was hosted by <strong>Bits&Bytes</strong>, with community partners including <strong>Coding Connoisseurs</strong>, <strong>Aryan Singh</strong>, and <strong>Notion Lucknow</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
                       </p>
                     </div>
                   </div>
@@ -183,9 +304,9 @@ export default function Events() {
                     <div className="space-y-0 divide-y divide-white/10 rounded-2xl border border-foreground/10 bg-foreground/5 overflow-hidden">
                       {[
                         { icon: <Calendar className="h-4 w-4 text-(--brand-red)" />, label: "Date", value: "Apr 19, 2026" },
-                        { icon: <MapPin className="h-4 w-4 text-(--brand-red)" />, label: "Venue", value: "Kolkata" },
+                        { icon: <MapPin className="h-4 w-4 text-(--brand-red)" />, label: "Venue", value: "Cubispace, Lucknow" },
                         { icon: <Users className="h-4 w-4 text-(--brand-red)" />, label: "Format", value: "In-Person Workshop" },
-                        { icon: <Check className="h-4 w-4 text-(--brand-red)" />, label: "Status", value: "Concluded" },
+                        { icon: <Check className="h-4 w-4 text-(--brand-red)" />, label: "Status", value: "Registrations Closed" },
                       ].map((s) => (
                         <div key={s.label} className="flex items-center justify-between px-5 py-3.5">
                           <div className="flex items-center gap-2.5">
@@ -198,19 +319,31 @@ export default function Events() {
                     </div>
 
                     {/* CTA */}
-                    <Button
-                      asChild
-                      className="w-full rounded-2xl bg-foreground/10 border border-foreground/20 py-5 text-sm font-bold text-foreground hover:bg-white/20 transition-colors"
-                    >
-                      <Link
-                        href="https://luma.com/xtxua1jl"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <div className="flex flex-col gap-3">
+                      <Button
+                        asChild
+                        className="w-full rounded-2xl bg-(--brand-red) py-5 text-sm font-bold text-white hover:bg-(--brand-red)/90 transition-colors"
                       >
-                        View Event Archive
-                        <ExternalLink className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                        <Link
+                          href="#"
+                        >
+                          Register for Event
+                        </Link>
+                      </Button>
+                      <Button
+                        asChild
+                        className="w-full rounded-2xl bg-foreground/10 border border-foreground/20 py-5 text-sm font-bold text-foreground hover:bg-white/20 transition-colors"
+                      >
+                        <Link
+                          href="https://luma.com/xtxua1jl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View Event Archive
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
 
@@ -290,7 +423,6 @@ export default function Events() {
                     Archived Event
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
-                    <Trophy className="h-3 w-3 text-(--brand-red)" />
                     In Collaboration with TechKriti '26, IIT Kanpur
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
@@ -300,7 +432,7 @@ export default function Events() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6 lg:col-span-2">
+                  <div className="prose max-w-none text-foreground/80 space-y-6 lg:col-span-2">
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
@@ -343,7 +475,7 @@ export default function Events() {
                         { icon: <Calendar className="h-4 w-4 text-(--brand-red)" />, label: "Date", value: "Mar 19–22, 2026" },
                         { icon: <MapPin className="h-4 w-4 text-(--brand-red)" />, label: "Venue", value: "IIT Kanpur" },
                         { icon: <Users className="h-4 w-4 text-(--brand-red)" />, label: "Team Size", value: "1–4 members" },
-                        { icon: <Building2 className="h-4 w-4 text-(--brand-red)" />, label: "Partners", value: "ByteForge, Bits & Bytes Kolkata" },
+                        { icon: <Building2 className="h-4 w-4 text-(--brand-red)" />, label: "Partners", value: "ByteForge, Bits & Bytes" },
                       ].map((s) => (
                         <div key={s.label} className="flex items-center justify-between px-5 py-3.5">
                           <div className="flex items-center gap-2.5">
@@ -448,14 +580,13 @@ export default function Events() {
                       Archived Event
                     </span>
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
-                      <Trophy className="h-3 w-3 text-(--brand-red)" />
-                      Official Executive Partner: Bits & Bytes Kolkata
+                      Official Executive Partner: Bits&Bytes
                     </span>
                   </div>
 
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6">
+                  <div className="prose max-w-none text-foreground/80 space-y-6">
                     <p className="text-lg text-foreground font-medium">
-                      <strong>India Innovates 2026</strong> is now archived. <strong>Bits & Bytes Kolkata (GobitsnBytes)</strong> was listed as the <strong>Official Executive Partner</strong> for the finale.
+                      India Innovates 2026 is now archived. <strong>Bits&Bytes (GobitsnBytes)</strong> was listed as the <strong>Official Executive Partner</strong> for the finale.
                     </p>
 
                     <div>
@@ -508,6 +639,39 @@ export default function Events() {
                         <li>The @hn.india account described it as a historic moment involving 5,000 innovators. <Link href="https://www.instagram.com/p/DWMfnECE8Eu/" target="_blank" className="text-(--brand-red) hover:underline">[instagram]</Link></li>
                       </ul>
                     </div>
+                  </div>
+
+                  <div className="space-y-6 mt-8">
+                    <div className="space-y-0 divide-y divide-white/10 rounded-2xl border border-foreground/10 bg-foreground/5 overflow-hidden">
+                      {[
+                        { icon: <Calendar className="h-4 w-4 text-(--brand-red)" />, label: "Date", value: "Mar 28, 2026" },
+                        { icon: <MapPin className="h-4 w-4 text-(--brand-red)" />, label: "Venue", value: "Bharat Mandapam, New Delhi" },
+                        { icon: <Users className="h-4 w-4 text-(--brand-red)" />, label: "Scale", value: "1.26 crore+ applicants" },
+                        { icon: <Check className="h-4 w-4 text-(--brand-red)" />, label: "Status", value: "Concluded" },
+                      ].map((s) => (
+                        <div key={s.label} className="flex items-center justify-between px-5 py-3.5">
+                          <div className="flex items-center gap-2.5">
+                            {s.icon}
+                            <span className="text-sm text-foreground/60 font-medium">{s.label}</span>
+                          </div>
+                          <span className="text-sm font-black text-foreground text-right">{s.value}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button
+                      asChild
+                      className="w-full rounded-2xl bg-foreground/10 border border-foreground/20 py-5 text-sm font-bold text-foreground hover:bg-white/20 transition-colors"
+                    >
+                      <Link
+                        href="https://indiainnovates.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Official Site (Archived)
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
               </GlassContainer>
@@ -614,5 +778,3 @@ export default function Events() {
     </>
   );
 }
-
-

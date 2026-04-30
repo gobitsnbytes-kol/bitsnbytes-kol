@@ -112,18 +112,18 @@ export default function FAQ() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-center justify-center overflow-hidden text-white pt-24 md:pt-32">
+      <section className="relative min-h-[58vh] sm:min-h-[64vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32 bg-[#FAF7EF]">
         <WebGLShader />
         <div className="relative z-10 w-full mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12 md:py-20">
             <div className="px-6 py-12 md:py-20 sm:px-10 lg:px-16 text-center">
             <div className="flex flex-col items-center gap-6">
-              <p className="text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/70 font-bold">
+              <p className="text-[10px] md:text-xs uppercase tracking-[0.35em] text-foreground/70 font-bold">
                 FAQ
               </p>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight font-black text-white tracking-tighter drop-shadow-2xl">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight font-black text-foreground tracking-tighter drop-shadow-2xl">
                 Frequently Asked <br className="hidden sm:block" /> Questions
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-medium">
+              <p className="text-base sm:text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed font-medium">
                 Everything you need to know about Bits & Bytes Kolkata and how to
                 participate.
               </p>
@@ -148,13 +148,13 @@ export default function FAQ() {
                 >
                   <button
                     onClick={() => toggleItem(index)}
-                    className="flex w-full items-center justify-between gap-4 p-6 md:p-8 text-left transition-colors hover:bg-white/5"
+                    className="flex w-full items-center justify-between gap-4 p-6 md:p-8 text-left transition-colors hover:bg-foreground/5"
                   >
-                    <h3 className="font-display text-lg md:text-xl font-black text-white pr-4 leading-tight">
+                    <h3 className="font-display text-lg md:text-xl font-black text-foreground pr-4 leading-tight">
                       {faq.question}
                     </h3>
                     <div className={cn(
-                      "flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-(--brand-red) transition-transform transition-colors transition-opacity duration-300",
+                      "flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-foreground/5 text-(--brand-red) transition-transform transition-colors transition-opacity duration-300",
                       isOpen && "rotate-180 bg-(--brand-red) text-white border-(--brand-red)/50"
                     )}>
                       <ChevronDown className="h-6 w-6" />
@@ -167,8 +167,8 @@ export default function FAQ() {
                     )}
                   >
                     <div className="overflow-hidden">
-                      <div className="px-6 md:px-8 pb-6 md:pb-8 border-t border-white/5 mt-2 pt-6">
-                        <p className="text-base md:text-lg text-white/70 font-medium leading-relaxed">
+                      <div className="px-6 md:px-8 pb-6 md:pb-8 border-t border-foreground/5 mt-2 pt-6">
+                        <p className="text-base md:text-lg text-foreground/70 font-medium leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -183,10 +183,10 @@ export default function FAQ() {
         {/* Still have questions CTA */}
         <PageSection align="center">
           <GlassContainer className="p-10 md:p-20 text-center" glowColor="both">
-            <h2 className="font-display text-3xl md:text-5xl font-black text-white tracking-tighter drop-shadow-2xl">
+            <h2 className="font-display text-3xl md:text-5xl font-black text-foreground tracking-tighter drop-shadow-2xl">
               Still have questions?
             </h2>
-            <p className="mt-4 text-lg md:text-xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed">
+            <p className="mt-4 text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto font-medium leading-relaxed">
               Can't find what you're looking for? Reach out to us directly and
               we'll get back to you as soon as possible.
             </p>
@@ -203,7 +203,7 @@ export default function FAQ() {
               <Button
                 asChild
                 variant="outline"
-                className="rounded-full border-white/20 bg-white/5 px-10 py-7 text-lg font-bold text-white backdrop-blur-md hover:bg-white/10 w-full sm:w-auto transition-transform transition-colors transition-opacity"
+                className="rounded-full border-foreground/10 bg-foreground/5 px-10 py-7 text-lg font-bold text-foreground backdrop-blur-md hover:bg-foreground/10 w-full sm:w-auto transition-transform transition-colors transition-opacity"
               >
                 <Link href="/join">Apply to Join</Link>
               </Button>
@@ -214,6 +214,3 @@ export default function FAQ() {
     </>
   );
 }
-
-
-

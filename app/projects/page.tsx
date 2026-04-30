@@ -10,9 +10,6 @@ import { PageSection } from "@/components/page-section";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-// Note: Metadata must be in a separate layout.tsx or use generateMetadata for client components
-// For now, the page title will be set via the layout
-
 // Lazy load WebGL shader
 const WebGLShader = dynamic(
   () =>
@@ -176,20 +173,20 @@ export default function Projects() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden text-white pt-24 md:pt-32">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32 bg-[#FAF7EF]">
         <WebGLShader />
         <div className="relative z-10 w-full mx-auto max-w-5xl px-4 sm:px-6 py-12 md:py-24">
-          <div className="relative border-2 border-[var(--brand-red)]/30 rounded-[32px] md:rounded-[40px] p-1.5 md:p-2 backdrop-blur-sm bg-black/10">
-            <div className="relative border-2 border-[var(--brand-red)]/50 rounded-[28px] md:rounded-[36px] py-8 px-4 sm:px-10 overflow-hidden bg-black/40 backdrop-blur-xl">
-              <div className="absolute inset-0 bg-[var(--brand-blue)]/20" />
+          <div className="relative border-2 border-foreground/10 rounded-[32px] md:rounded-[40px] p-1.5 md:p-2 backdrop-blur-sm bg-foreground/5">
+            <div className="relative border-2 border-foreground/20 rounded-[28px] md:rounded-[36px] py-8 px-4 sm:px-10 overflow-hidden bg-white/60 backdrop-blur-xl">
+              <div className="absolute inset-0 bg-(--brand-red)/5" />
               <div className="relative z-10 space-y-4 text-center">
-                <p className="text-[10px] md:text-xs uppercase tracking-[0.35em] text-white/70">
+                <p className="text-[10px] md:text-xs uppercase tracking-[0.35em] text-foreground/70">
                   Showcase
                 </p>
-                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold text-white">
+                <h1 className="font-display text-3xl sm:text-4xl md:text-5xl leading-tight font-extrabold text-foreground">
                   Projects built by the crew
                 </h1>
-                <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
+                <p className="text-base md:text-lg text-foreground/80 max-w-2xl mx-auto">
                   From web apps to AI tools, explore what our teen builders have
                   shipped. Every project here started as an idea in our Discord.
                 </p>
@@ -263,7 +260,7 @@ export default function Projects() {
                 </div>
                 <div className="p-6 space-y-4">
                   <div>
-                    <h3 className="font-display text-xl font-bold text-foreground dark:text-white">
+                    <h3 className="font-display text-xl font-bold text-foreground">
                       {project.title}
                     </h3>
                     <p className="mt-2 text-sm text-muted-foreground line-clamp-4">
@@ -274,7 +271,7 @@ export default function Projects() {
                     {project.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white/20 bg-white/5 px-2 py-0.5 text-xs text-muted-foreground"
+                        className="rounded-full border border-foreground/10 bg-foreground/5 px-2 py-0.5 text-xs text-muted-foreground"
                       >
                         {tag}
                       </span>
@@ -292,7 +289,7 @@ export default function Projects() {
                         </div>
                       ))}
                       {project.team.length > 3 && (
-                        <div className="h-8 w-8 rounded-full border-2 border-background bg-white/10 flex items-center justify-center text-xs text-muted-foreground">
+                        <div className="h-8 w-8 rounded-full border-2 border-background bg-foreground/10 flex items-center justify-center text-xs text-muted-foreground">
                           +{project.team.length - 3}
                         </div>
                       )}
@@ -303,7 +300,7 @@ export default function Projects() {
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 rounded-full border border-white/20 hover:border-white/40 hover:bg-white/5 transition-colors"
+                          className="p-2 rounded-full border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-colors"
                         >
                           <Github className="h-4 w-4" />
                         </Link>
@@ -313,7 +310,7 @@ export default function Projects() {
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 rounded-full border border-white/20 hover:border-white/40 hover:bg-white/5 transition-colors"
+                          className="p-2 rounded-full border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-colors"
                         >
                           <ExternalLink className="h-4 w-4" />
                         </Link>
@@ -338,7 +335,7 @@ export default function Projects() {
             <Button
               variant="outline"
               onClick={() => setShowFilters(!showFilters)}
-              className="w-full rounded-full border-white/20"
+              className="w-full rounded-full border-foreground/10"
             >
               <Filter className="mr-2 h-4 w-4" />
               {showFilters ? "Hide Filters" : "Show Filters"}
@@ -360,7 +357,7 @@ export default function Projects() {
                   "rounded-full px-4 py-2 text-sm font-medium transition-transform transition-colors transition-opacity duration-300",
                   activeCategory === category.value
                     ? "bg-[var(--brand-red)] text-white shadow-[var(--glow-soft)]"
-                    : "border border-white/20 bg-white/5 text-muted-foreground hover:border-white/40 hover:text-foreground",
+                    : "border border-foreground/10 bg-foreground/5 text-muted-foreground hover:border-foreground/20 hover:text-foreground",
                 )}
               >
                 {category.label}
@@ -405,7 +402,7 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="p-5 space-y-3">
-                  <h3 className="font-display text-lg font-bold text-foreground dark:text-white">
+                  <h3 className="font-display text-lg font-bold text-foreground">
                     {project.title}
                   </h3>
                   <p className="text-sm text-muted-foreground line-clamp-4">
@@ -415,7 +412,7 @@ export default function Projects() {
                     {project.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-muted-foreground"
+                        className="rounded-full border border-foreground/10 bg-foreground/5 px-2 py-0.5 text-[10px] text-muted-foreground"
                       >
                         {tag}
                       </span>
@@ -431,7 +428,7 @@ export default function Projects() {
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-1.5 rounded-full border border-white/15 hover:border-white/30 hover:bg-white/5 transition-colors"
+                          className="p-1.5 rounded-full border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-colors"
                         >
                           <Github className="h-3.5 w-3.5" />
                         </Link>
@@ -441,7 +438,7 @@ export default function Projects() {
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-1.5 rounded-full border border-white/15 hover:border-white/30 hover:bg-white/5 transition-colors"
+                          className="p-1.5 rounded-full border border-foreground/10 hover:border-foreground/20 hover:bg-foreground/5 transition-colors"
                         >
                           <ExternalLink className="h-3.5 w-3.5" />
                         </Link>
@@ -473,7 +470,7 @@ export default function Projects() {
         {/* CTA Section */}
         <PageSection align="center">
           <div className="glass-card relative isolate overflow-hidden p-8 md:p-12 text-center shadow-xl">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground dark:text-white">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
               Have a project idea?
             </h2>
             <p className="mt-3 text-muted-foreground max-w-xl mx-auto">
@@ -491,7 +488,7 @@ export default function Projects() {
               <Button
                 asChild
                 variant="outline"
-                className="rounded-full border-white/20"
+                className="rounded-full border-foreground/10"
               >
                 <Link href="/contact">Propose a Project</Link>
               </Button>
@@ -502,5 +499,3 @@ export default function Projects() {
     </>
   );
 }
-
-
