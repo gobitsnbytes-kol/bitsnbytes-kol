@@ -33,7 +33,7 @@ export function WebGLShader({ className = "" }: WebGLShaderProps) {
         mouseReact={false}
         mouseStrength={0}
         pageLoadAnimation={false}
-        brightness={0.9}
+        brightness={1.0}
         className="absolute inset-0"
       />
       <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,rgba(250,247,239,0.4)_0%,rgba(250,247,239,0)_60%),radial-gradient(70%_55%_at_100%_100%,rgba(197,49,46,0.08)_0%,rgba(197,49,46,0)_70%),radial-gradient(55%_40%_at_0%_100%,rgba(197,49,46,0.06)_0%,rgba(197,49,46,0)_75%)]" />

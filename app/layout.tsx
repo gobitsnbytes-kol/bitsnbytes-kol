@@ -28,8 +28,8 @@ const jetBrainsMono = JetBrains_Mono({
 // SEO-optimized viewport configuration
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#3E1E68" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: light)", color: "#FAF7EF" },
+    { media: "(prefers-color-scheme: dark)", color: "#FAF7EF" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -277,8 +277,9 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${anton.variable} ${jetBrainsMono.variable}`}
+      className={`light ${anton.variable} ${jetBrainsMono.variable}`}
       suppressHydrationWarning
+      style={{ colorScheme: "light" }}
     >
       <head>
         <link rel="dns-prefetch" href="https://vercel.live" />

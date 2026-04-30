@@ -93,22 +93,22 @@ function TeamCard({
           "h-full",
           "md:backdrop-blur-lg",
           // Consistent neutral framing
-          "border border-foreground/10",
+          "border border-border",
           // Founders get extra border
-          member.isFounder && "border-foreground/20",
+          member.isFounder && "border-border/60",
           // Featured members (Aadrika) pop out even more
-          member.isFeatured && "scale-[1.02] sm:scale-105 z-20 ring-1 ring-foreground/10",
+          member.isFeatured && "scale-[1.02] sm:scale-105 z-20 ring-1 ring-border/20",
         )}
         style={{
           background:
-            "linear-gradient(180deg, rgba(255,255,255,0.86) 0%, rgba(250,250,250,0.94) 58%, rgba(245,245,245,0.98) 100%)",
+            "linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(252,252,252,0.98) 58%, rgba(255,255,255,1) 100%)",
         }}
       >
         {/* Image section - larger for better portraits */}
         <div className="relative z-10 mx-auto w-full max-w-[280px] sm:max-w-[300px] aspect-square flex-shrink-0 mt-2">
           <div className="relative h-full w-full rounded-full overflow-hidden">
             {/* Main image - circular display as requested */}
-            <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-foreground/10 bg-foreground/5">
+            <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-border bg-white">
               <Image
                 src={member.image}
                 alt={member.name}
@@ -124,7 +124,7 @@ function TeamCard({
 
         {/* Text content section - cleaner without tags */}
         <div className="relative z-10 flex-1 mt-2 sm:mt-3">
-          <div className="absolute inset-0 -mx-3 -mb-3 sm:-mx-4 sm:-mb-4 rounded-b-xl sm:rounded-b-2xl bg-white/90 backdrop-blur-md border-t border-foreground/5" />
+          <div className="absolute inset-0 -mx-3 -mb-3 sm:-mx-4 sm:-mb-4 rounded-b-xl sm:rounded-b-2xl bg-white/95 backdrop-blur-md border-t border-border" />
 
           <div className="relative flex h-full flex-col p-3 sm:p-4 text-foreground z-10">
             {/* Header with role, name, and LinkedIn */}
@@ -146,7 +146,7 @@ function TeamCard({
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-foreground/10 bg-foreground/5 transition-transform transition-colors transition-opacity hover:scale-110 hover:bg-foreground/10 text-foreground"
+                      className="group flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-border bg-white transition-transform transition-colors transition-opacity hover:scale-110 hover:bg-white/90 text-foreground"
                       aria-label={label}
                       style={{ boxShadow: `0 0 0 1px ${cardAccent}33 inset` }}
                     >
@@ -176,7 +176,7 @@ function VolunteerCard({ volunteer }: { volunteer: Volunteer }) {
     <div className="group relative flex flex-col items-center w-24 sm:w-32">
       <div className="relative mb-2 sm:mb-3">
         {/* Avatar container */}
-        <div className="relative h-16 w-16 sm:h-20 sm:w-20 overflow-hidden rounded-full border-2 border-foreground/10 bg-foreground/5 group-hover:border-[var(--brand-red)]/50 transition-transform transition-colors transition-opacity duration-300 group-hover:scale-105">
+        <div className="relative h-16 w-16 sm:h-20 sm:w-20 overflow-hidden rounded-full border-2 border-border bg-white group-hover:border-[var(--brand-red)]/50 transition-transform transition-colors transition-opacity duration-300 group-hover:scale-105">
           {isPlaceholder || imageError ? (
             <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[var(--brand-blue)]/80 to-[var(--brand-blue-dark)]/80">
               <User className="h-8 w-8 sm:h-10 sm:w-10 text-white/60" />
@@ -209,7 +209,7 @@ function VolunteerCard({ volunteer }: { volunteer: Volunteer }) {
               href={volunteer.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-foreground/5 border border-foreground/10 text-foreground transition-transform transition-colors transition-opacity hover:bg-foreground/10 hover:scale-110"
+              className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-white border border-border text-foreground transition-transform transition-colors transition-opacity hover:bg-white/90 hover:scale-110"
               aria-label={`${volunteer.name}'s LinkedIn`}
             >
               <Linkedin className="h-3 w-3 sm:h-3.5 sm:w-3.5" />

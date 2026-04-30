@@ -137,19 +137,19 @@ export function Features() {
                             <div className="before:bg-foreground/10 relative mt-10 sm:mt-0 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-12 sm:-mr-12">
                                 <div className="relative flex h-full flex-col justify-center space-y-8 py-12">
                                     <div className="relative flex w-[calc(50%+1.5rem)] items-center justify-end gap-3 transition-transform hover:scale-105">
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Shoryavardhaan Gupta</span>
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Shoryavardhaan Gupta</span>
                                         <div className="ring-(--brand-blue)/30 size-12 ring-2 rounded-full overflow-hidden border border-foreground/20">
-                                            <Image className="size-full object-cover" src="/team/shorya.png" alt="Shorya" width={48} height={48} />
+                                            <Image className="size-full object-cover" src="https://avatars.githubusercontent.com/u/108920197?v=4" alt="Shorya" width={48} height={48} />
                                         </div>
                                     </div>
                                     <div className="relative ml-[calc(50%-1.25rem)] flex items-center gap-3 transition-transform hover:scale-105">
                                         <div className="ring-foreground/10 size-14 ring-2 rounded-full overflow-hidden border border-foreground/20">
                                             <Image className="size-full object-cover" src="/team/yash.jpeg" alt="Yash" width={56} height={56} />
                                         </div>
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Yash Singh</span>
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Yash Singh</span>
                                     </div>
                                     <div className="relative flex w-[calc(50%+1.5rem)] items-center justify-end gap-3 transition-transform hover:scale-105">
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Akshat Kushwaha</span>
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Akshat Kushwaha</span>
                                         <div className="ring-foreground/10 size-12 ring-2 rounded-full overflow-hidden border border-foreground/20">
                                             <Image className="size-full object-cover" src="/team/akshat.jpg" alt="Akshat" width={48} height={48} />
                                         </div>
@@ -158,7 +158,7 @@ export function Features() {
                                         <div className="ring-foreground/10 size-12 ring-2 rounded-full overflow-hidden border border-foreground/20">
                                             <Image className="size-full object-cover" src="/team/aadrika.png" alt="Aadrika" width={48} height={48} />
                                         </div>
-                                        <span className="block h-fit rounded-full border border-foreground/10 bg-foreground/5 px-4 py-1.5 text-xs font-bold text-foreground shadow-sm backdrop-blur-md">Aadrika Maurya</span>
+                                        <span className="block h-fit rounded-full border border-foreground/10 bg-white/80 px-4 py-1.5 text-xs font-bold text-foreground backdrop-blur-md">Aadrika Maurya</span>
                                     </div>
                                 </div>
                             </div>

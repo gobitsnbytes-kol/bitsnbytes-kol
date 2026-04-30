@@ -29,11 +29,11 @@ const heroEvents = [
   {
     image: "/images/github-copilot-hero-desktop.png",
     imageMobile: "/images/github-copilot-hero-mobile.png",
-    alt: "GitHub Copilot Dev Days | Kolkata",
+    alt: "GitHub Copilot Dev Days | Lucknow",
     badge: "Upcoming Event",
     status: "upcoming",
     title: "GitHub Copilot Dev Days",
-    subtitle: "Coming Soon · Kolkata",
+    subtitle: "Coming Soon · Lucknow",
     href: "/events",
   },
   {
