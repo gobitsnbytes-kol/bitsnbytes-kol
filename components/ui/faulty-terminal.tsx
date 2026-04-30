@@ -209,7 +209,9 @@ void main() {
       col += (rnd - 0.5) * (uDither * 0.003922);
     }
 
-    gl_FragColor = vec4(col, 1.0);
+    // Use max color component as alpha to enable transparency
+    float alpha = max(max(col.r, col.g), col.b);
+    gl_FragColor = vec4(col, alpha);
 }
 `;
 
@@ -301,14 +303,15 @@ export default function FaultyTerminal({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({ dpr: resolvedDpr });
+    const renderer = new Renderer({ dpr: resolvedDpr, alpha: true, premultipliedAlpha: false });
     const gl = renderer.gl;
-    gl.clearColor(0, 0, 0, 1);
+    gl.clearColor(0, 0, 0, 0);
 
     const geometry = new Triangle(gl);
     const program = new Program(gl, {
       vertex: vertexShader,
       fragment: fragmentShader,
+      transparent: true,
       uniforms: {
         iTime: { value: 0 },
         iResolution: {

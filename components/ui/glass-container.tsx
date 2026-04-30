@@ -26,7 +26,7 @@ export function GlassContainer({
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
 
             <div className={cn(
-                "relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-[2.25rem] border border-(--brand-off-white)/10 bg-black/40",
+                "relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-[2.25rem] border border-(--brand-off-white)/20 bg-white/10",
                 className
             )}>
                 {/* Animated glass shine */}
