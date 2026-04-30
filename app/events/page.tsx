@@ -162,7 +162,7 @@ export default function Events() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6 lg:col-span-2">
+                  <div className="prose max-w-none text-foreground/80 space-y-6 lg:col-span-2">
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
@@ -274,7 +274,7 @@ export default function Events() {
 
                 {/* Stats + details two-column */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6 lg:col-span-2">
+                  <div className="prose max-w-none text-foreground/80 space-y-6 lg:col-span-2">
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
@@ -432,7 +432,7 @@ export default function Events() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6 lg:col-span-2">
+                  <div className="prose max-w-none text-foreground/80 space-y-6 lg:col-span-2">
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
@@ -584,7 +584,7 @@ export default function Events() {
                     </span>
                   </div>
 
-                  <div className="prose prose-invert max-w-none text-foreground/80 space-y-6">
+                  <div className="prose max-w-none text-foreground/80 space-y-6">
                     <p className="text-lg text-foreground font-medium">
                       India Innovates 2026 is now archived. <strong>Bits&Bytes (GobitsnBytes)</strong> was listed as the <strong>Official Executive Partner</strong> for the finale.
                     </p>

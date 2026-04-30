@@ -34,7 +34,7 @@ export function Features() {
                         className="overflow-hidden p-8 md:p-12"
                         glowColor="blue"
                     >
-                        <div className="relative mx-auto flex aspect-square size-32 rounded-3xl border border-foreground/10 bg-foreground/5 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <div className="relative mx-auto flex aspect-square size-32 rounded-3xl border border-foreground/10 bg-white/80 transition-transform group-hover:scale-110 group-hover:rotate-3 shadow-inner">
                             <Lightbulb className="m-auto h-14 w-14 text-(--brand-red)" />
                         </div>
                         <div className="relative z-10 mt-10 space-y-3 text-center">
@@ -92,7 +92,7 @@ export function Features() {
                     >
                         <div className="grid sm:grid-cols-2 h-full">
                             <div className="relative z-10 flex flex-col justify-between space-y-12 h-full">
-                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-foreground/5 transition-transform group-hover:scale-110">
+                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-white/80 transition-transform group-hover:scale-110 shadow-inner">
                                     <Rocket className="m-auto size-7 text-(--brand-red)" />
                                 </div>
                                 <div className="space-y-4">
@@ -100,7 +100,7 @@ export function Features() {
                                     <p className="text-base text-foreground/60 font-medium leading-relaxed">Building the labs of tomorrow with AI, distributed systems, and creative code.</p>
                                 </div>
                             </div>
-                            <div className="rounded-3xl relative -mb-12 -mr-12 mt-8 sm:mt-0 h-full min-h-[200px] border-l border-t border-foreground/10 bg-foreground/5 p-8 sm:ml-8 overflow-hidden">
+                            <div className="rounded-3xl relative -mb-12 -mr-12 mt-8 sm:mt-0 h-full min-h-[200px] border-l border-t border-foreground/10 bg-white/50 p-8 sm:ml-8 overflow-hidden">
                                 <div className="absolute left-6 top-4 flex gap-1.5">
                                     <span className="block size-2.5 rounded-full border border-foreground/10 bg-red-500/50"></span>
                                     <span className="block size-2.5 rounded-full border border-foreground/10 bg-yellow-500/50"></span>
@@ -126,7 +126,7 @@ export function Features() {
                     >
                         <div className="grid sm:grid-cols-2 h-full">
                             <div className="relative z-10 flex flex-col justify-between space-y-12 h-full">
-                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-foreground/5 transition-transform group-hover:scale-110">
+                                <div className="relative flex aspect-square size-14 rounded-2xl border border-foreground/10 bg-white/80 transition-transform group-hover:scale-110 shadow-inner">
                                     <Users className="m-auto size-7 text-(--brand-red)" />
                                 </div>
                                 <div className="space-y-4">

@@ -76,7 +76,7 @@ export const HeroFuturistic = () => {
           >
             <div className="flex flex-col h-full gap-6 sm:gap-8 md:gap-10">
               {/* Teen-led badge */}
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-3 py-1 sm:px-4 sm:py-1.5 text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.25em] sm:tracking-[0.35em] text-foreground/80 backdrop-blur-md shadow-inner">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-foreground/20 bg-white/80 px-3 py-1 sm:px-4 sm:py-1.5 text-[0.6rem] sm:text-[0.65rem] font-bold uppercase tracking-[0.25em] sm:tracking-[0.35em] text-foreground/80 backdrop-blur-md shadow-sm">
                 <Sparkles className="h-3 w-3 text-(--brand-red)" />
                 TEEN-LED
               </span>
@@ -107,7 +107,7 @@ export const HeroFuturistic = () => {
                 <Button
                   asChild
                   variant="outline"
-                  className="w-full sm:flex-1 h-12 sm:h-14 px-6 sm:px-8 rounded-full border-foreground/20 bg-foreground/5 text-sm sm:text-base font-semibold text-foreground backdrop-blur-md hover:bg-foreground/10 transition-transform transition-colors transition-opacity hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-white/20"
+                  className="w-full sm:flex-1 h-12 sm:h-14 px-6 sm:px-8 rounded-full border-foreground/20 bg-white/80 text-sm sm:text-base font-semibold text-foreground backdrop-blur-md hover:bg-white transition-transform transition-colors transition-opacity hover:scale-[1.02] focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-white/20 shadow-sm"
                 >
                   <Link href="/impact" className="flex items-center justify-center">See what we&apos;ve built</Link>
                 </Button>

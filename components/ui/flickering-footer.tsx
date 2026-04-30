@@ -264,7 +264,7 @@ export function FlickeringFooter() {
                                 href={href}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1.5 text-xs backdrop-blur-md transition-colors hover:border-foreground/30 hover:text-foreground"
+                                className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-white/80 px-3 py-1.5 text-xs backdrop-blur-md transition-colors hover:border-foreground/30 hover:text-foreground shadow-sm"
                             >
                                 <Icon className="h-3.5 w-3.5" />
                                 <span>{label}</span>
