@@ -42,9 +42,9 @@ export function GlowingCard({
             )}
             style={{ animationDelay: `${animationDelay}s` }}
         >
-            <div className="relative h-full overflow-hidden rounded-[2.5rem] border border-foreground/10 bg-foreground/5 p-2 backdrop-blur-2xl transition-transform transition-colors transition-opacity duration-500 hover:border-foreground/20 hover:bg-foreground/10">
+            <div className="relative h-full overflow-hidden rounded-[2.5rem] border border-(--brand-red)/10 bg-(--brand-red)/5 p-2 backdrop-blur-2xl transition-transform transition-colors transition-opacity duration-500 hover:border-(--brand-red)/20 hover:bg-(--brand-red)/10">
                 {/* Reflective top edge */}
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-foreground/10 to-transparent z-20" />
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-(--brand-red)/10 to-transparent z-20" />
 
                 <GlowingEffect
                     spread={spread}
@@ -55,7 +55,7 @@ export function GlowingCard({
                     borderWidth={borderWidth}
                 />
 
-                <div className="relative h-full overflow-hidden rounded-[2.25rem] border border-foreground/5 bg-white/60 p-6 md:p-8 flex flex-col justify-between gap-4">
+                <div className="relative h-full overflow-hidden rounded-[2.25rem] border border-(--brand-red)/5 bg-white/80 p-6 md:p-8 flex flex-col justify-between gap-4">
                     {/* Inner glass shine */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent opacity-50" />
 
