@@ -55,7 +55,8 @@ const coreTeam: CoreTeamMember[] = [
     name: "Shoryavardhaan Gupta",
     role: "Kolkata Fork Lead",
     image: "/team/shorya.png",
-    mobileImagePosition: "center 15%",
+    imagePosition: "center center",
+    mobileImagePosition: "center center",
     bio: "Leading the independent Bits & Bytes Kolkata, driving the mission to build high-performance, student-led tech communities across the city of joy.",
     expertise: [
       "Project Leadership",

@@ -35,7 +35,7 @@ export default function Events() {
     <>
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section
-        className="relative min-h-[72vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32"
+        className="relative min-h-[72vh] flex items-center justify-center overflow-hidden text-foreground pt-24 md:pt-32 bg-[#FAF7EF]"
         aria-labelledby="events-hero-title"
       >
         <WebGLShader />
@@ -147,7 +147,10 @@ export default function Events() {
                     Archived Event
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
-                    Hosted by Bits & Bytes Kolkata
+                    Initiative of Bits & Bytes Main
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
+                    Kolkata Chapter Partner
                   </span>
                 </div>
 
@@ -174,7 +177,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Partners & Details</h2>
                       <p>
-                        The event was hosted by <strong>Bits & Bytes Kolkata</strong>, with community partners including <strong>Coding Connoisseurs</strong>, <strong>Aryan Singh</strong>, and <strong>Notion Kolkata</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
+                        The event was an initiative of the <strong>Bits & Bytes Main</strong> organization, with <strong>Bits & Bytes Kolkata</strong> serving as a local community partner alongside <strong>Coding Connoisseurs</strong>, <strong>Aryan Singh</strong>, and <strong>Notion Kolkata</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
                       </p>
                     </div>
                   </div>
@@ -291,7 +294,7 @@ export default function Events() {
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
                     <Trophy className="h-3 w-3 text-(--brand-red)" />
-                    In Collaboration with TechKriti '26, IIT Kanpur
+                    Bits & Bytes Main x TechKriti '26
                   </span>
                   <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
                     <Building2 className="h-3 w-3 text-(--brand-red)" />
@@ -304,7 +307,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
-                        <strong>Execron 1.0</strong> was an AI Hackathon & Workshop designed for students in <strong>Classes 9–12</strong>. Held in collaboration with <strong>TechKriti '26, IIT Kanpur</strong>, the event featured a 4-hour hands-on tech workshop followed by a 24-hour hackathon sprint.
+                        <strong>Execron 1.0</strong> was an AI Hackathon & Workshop designed for students in <strong>Classes 9–12</strong>. Organized by the <strong>Bits & Bytes Main</strong> organization in collaboration with <strong>TechKriti '26, IIT Kanpur</strong>, the event featured a 4-hour hands-on tech workshop followed by a 24-hour hackathon sprint.
                       </p>
                     </div>
 
@@ -449,19 +452,22 @@ export default function Events() {
                     </span>
                     <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
                       <Trophy className="h-3 w-3 text-(--brand-red)" />
+                      Bits & Bytes Main x HN Group
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-foreground/80 backdrop-blur-md">
                       Official Executive Partner: Bits & Bytes Kolkata
                     </span>
                   </div>
 
                   <div className="prose prose-invert max-w-none text-foreground/80 space-y-6">
                     <p className="text-lg text-foreground font-medium">
-                      <strong>India Innovates 2026</strong> is now archived. <strong>Bits & Bytes Kolkata (GobitsnBytes)</strong> was listed as the <strong>Official Executive Partner</strong> for the finale.
+                      <strong>India Innovates 2026</strong> was a landmark initiative of the <strong>Bits & Bytes Main</strong> organization in collaboration with <strong>HN Group</strong>. <strong>Bits & Bytes Kolkata</strong> served as the <strong>Official Executive Partner</strong> for the finale at Bharat Mandapam.
                     </p>
 
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
-                        India Innovates 2026 was presented as the <strong>World's Largest Civic Tech Hackathon</strong>, held on <strong>March 28, 2026</strong> at <strong>Bharat Mandapam, Pragati Maidan, New Delhi</strong> (9 AM - 7 PM). Organizers included <strong>HN Group</strong> and <strong>MCD</strong>, with partner institutions such as <strong>IIT Kharagpur, NSUT, GGSIPU, and DDU</strong>. <Link href="https://indiainnovates.org" target="_blank" className="text-(--brand-red) hover:underline">[indiainnovates]</Link>
+                        India Innovates 2026 was presented as the <strong>World's Largest Civic Tech Hackathon</strong>, held on <strong>March 28, 2026</strong> at <strong>Bharat Mandapam, Pragati Maidan, New Delhi</strong> (9 AM - 7 PM). Organized by <strong>HN Group</strong> and <strong>Bits & Bytes Main</strong>, with partner institutions such as <strong>IIT Kharagpur, NSUT, GGSIPU, and DDU</strong>. <Link href="https://indiainnovates.org" target="_blank" className="text-(--brand-red) hover:underline">[indiainnovates]</Link>
                       </p>
                     </div>
 

@@ -62,7 +62,7 @@ export const HeroFuturistic = () => {
 
   return (
     <section
-      className="relative overflow-hidden rounded-b-[1.5rem] sm:rounded-b-[2rem] md:rounded-b-[3rem] lg:rounded-b-[3.5rem] text-foreground w-full max-w-full"
+      className="relative overflow-hidden rounded-b-[1.5rem] sm:rounded-b-[2rem] md:rounded-b-[3rem] lg:rounded-b-[3.5rem] text-foreground w-full max-w-full bg-[#FAF7EF]"
       aria-labelledby="home-hero-title"
     >
       <WebGLShader />

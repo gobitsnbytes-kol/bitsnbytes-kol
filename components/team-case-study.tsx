@@ -105,16 +105,16 @@ function TeamCard({
         }}
       >
         {/* Image section - larger for better portraits */}
-        <div className="relative z-10 mx-1 sm:mx-2 h-[280px] sm:h-[280px] md:h-[320px] lg:h-[340px] flex-shrink-0">
-          <div className="relative h-full w-full rounded-xl sm:rounded-2xl overflow-hidden">
-            {/* Main image - keep it full-bleed on mobile with tuned focal points per portrait */}
-            <div className="relative h-full w-full overflow-hidden rounded-xl sm:rounded-2xl border border-foreground/10 bg-foreground/5">
+        <div className="relative z-10 mx-auto w-full max-w-[280px] sm:max-w-[300px] aspect-square flex-shrink-0 mt-2">
+          <div className="relative h-full w-full rounded-full overflow-hidden">
+            {/* Main image - circular display as requested */}
+            <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-foreground/10 bg-foreground/5">
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                quality={90}
+                quality={95}
                 className="object-cover [object-position:var(--team-image-position-mobile)] [transform:scale(var(--team-image-scale-mobile))] sm:[object-position:var(--team-image-position)] sm:[transform:scale(var(--team-image-scale))]"
                 style={imageStyle}
               />
