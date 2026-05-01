@@ -1,10 +1,10 @@
 
-# Bits & Bytes Kolkata Team – Agents Handbook
+# Bits&Bytes Kolkata Team – Agents Handbook
 
 > **Mission:** Empowering ambitious teenagers to ship meaningful tech through premium hackathons, design/dev squads, and real-world product launches.  
 > **Org Type:** Nonprofit · Independent Teen‑Led Code Club · Based in Kolkata, India · Serving builders nationwide
 
-This handbook describes the core Bits & Bytes Kolkata “agents” (team members), what each person is great at, and how we collaborate to ship high‑impact, production-grade projects fast.
+This handbook describes the core Bits&Bytes Kolkata “agents” (team members), what each person is great at, and how we collaborate to ship high‑impact, production-grade projects fast.
 
 ---
 
@@ -14,7 +14,7 @@ This handbook describes the core Bits & Bytes Kolkata “agents” (team members
 We move away from "beginner-friendly" formats that treat participants like they need constant hand-holding. We build space for exceptionally talented, high-agency individuals who want to ship real products, not just prototypes.
 
 ### 1.2 The Origin Story
-Originally hosting Daydream Kolkata under Hack Club, we faced a last-minute venue withdrawal with everything already set. Instead of quitting, we forked Bits & Bytes and realized that independence allows us to bypass the rigid formats of global orgs and deliver actual sponsor ROI and participant value.
+Originally hosting Daydream Kolkata under Hack Club, we faced a last-minute venue withdrawal with everything already set. Instead of quitting, we forked Bits&Bytes and realized that independence allows us to bypass the rigid formats of global orgs and deliver actual sponsor ROI and participant value.
 
 ---
 
@@ -39,7 +39,7 @@ Quick reference for “who to ping for what”.
 #### Shoryavardhaan Gupta – Kolkata Fork Lead
 - **Expertise:** Project Leadership, Full-Stack Architecture, Community Strategy, Growth Operations
 - **Achievements:** 
-  - Leading the independent Bits & Bytes Kolkata, driving the mission to build high-performance, student-led tech communities across the city of joy.
+  - Leading the independent Bits&Bytes Kolkata, driving the mission to build high-performance, student-led tech communities across the city of joy.
 - **Profiles:**
   - LinkedIn: https://linkedin.com/in/shoryavardhaan
 - **Owns:** City-wide community leadership and full-stack project operations.
@@ -75,7 +75,7 @@ Quick reference for “who to ping for what”.
 - **Achievements:** 
   - **AI-native systems engineer** who asks what happens when software fails—building production workflows and retrieval architectures that survive real constraints.
   - **Lead at STEMist Prayagraj**: Defining high-performance engineering culture for young builders across the city.
-  - **Lead Architect**: Built the entire Bits & Bytes Kolkata production-grade tech infrastructure from scratch.
+  - **Lead Architect**: Built the entire Bits&Bytes Kolkata production-grade tech infrastructure from scratch.
 - **Profiles:**
   - Website: https://a3ro.dev
   - GitHub: https://github.com/a3ro-dev

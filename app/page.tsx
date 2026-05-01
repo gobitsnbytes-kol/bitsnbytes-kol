@@ -60,7 +60,7 @@ export default function Home() {
         <PageSection
           eyebrow="Impact"
           title="Club-powered learning with real outcomes"
-          description="We're Bits & Bytes Kolkata where workshops, hackathons, and build nights lead directly to shipped projects and new opportunities."
+          description="We're Bits&Bytes Kolkata where workshops, hackathons, and build nights lead directly to shipped projects and new opportunities."
         >
           <div className="grid gap-6 md:grid-cols-3">
             {stats.map((stat) => (

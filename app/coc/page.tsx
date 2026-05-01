@@ -82,7 +82,7 @@ const strikes = [
   {
     number: "3",
     title: "Third Strike",
-    description: "Permanent removal from Bits & Bytes Kolkata community.",
+    description: "Permanent removal from Bits&Bytes Kolkata community.",
     color: "bg-red-500",
   },
 ];
@@ -91,7 +91,7 @@ const appliesTo = [
   "All offline meetups, workshops, and events",
   "Discord, WhatsApp, and other official online spaces",
   "Any club-affiliated projects or collaborations",
-  "Social media interactions under Bits & Bytes Kolkata name",
+  "Social media interactions under Bits&Bytes Kolkata name",
 ];
 
 export default function CodeOfConduct() {
@@ -124,7 +124,7 @@ export default function CodeOfConduct() {
           align="center"
           eyebrow="Our Promise"
           title="What we stand for"
-          description="Bits & Bytes Kolkata is home for builders, dreamers, designers, and that one person who always knows the shortcut keys."
+          description="Bits&Bytes Kolkata is home for builders, dreamers, designers, and that one person who always knows the shortcut keys."
         >
           <div className="mx-auto max-w-3xl">
             <GlassContainer className="p-8 md:p-12 text-center" glowColor="both">
@@ -175,7 +175,7 @@ export default function CodeOfConduct() {
           align="center"
           eyebrow="Scope"
           title="Where this applies"
-          description="If it has Bits & Bytes Kolkata name on it, this code covers it."
+          description="If it has Bits&Bytes Kolkata name on it, this code covers it."
         >
           <div className="mx-auto max-w-2xl">
             <GlassContainer className="p-8 md:p-10" glowColor="purple">
@@ -268,7 +268,7 @@ export default function CodeOfConduct() {
                     Important:
                   </strong>{" "}
                   For serious violations, the team may take immediate action
-                  without warning. Bits & Bytes Kolkata staff has sole discretion in
+                  without warning. Bits&Bytes Kolkata staff has sole discretion in
                   determining what constitutes a violation. Decisions are made to
                   maintain a safe, welcoming community.
                 </p>
@@ -294,10 +294,10 @@ export default function CodeOfConduct() {
                   <div className="text-center md:text-left">
                     <p className="text-sm text-foreground/50 font-bold uppercase tracking-[0.2em] mb-1">Email us at</p>
                     <a
-                      href="mailto:kolkata@bitsnbytes.org"
+                      href="mailto:kolkata@Bits&Bytes.org"
                       className="text-2xl md:text-3xl font-black text-foreground hover:text-(--brand-red) transition-colors tracking-tighter"
                     >
-                      kolkata@bitsnbytes.org
+                      kolkata@Bits&Bytes.org
                     </a>
                   </div>
                 </div>
@@ -319,7 +319,7 @@ export default function CodeOfConduct() {
         <PageSection align="center">
           <GlassContainer className="p-10 md:p-20 text-center" glowColor="both">
             <p className="text-xl md:text-3xl font-black text-foreground leading-tight max-w-3xl mx-auto tracking-tighter">
-              "Bits & Bytes Kolkata exists to be a positive, creative, exciting space.
+              "Bits&Bytes Kolkata exists to be a positive, creative, exciting space.
               <span className="block mt-2 text-(--brand-red)">
                 Help us keep it that way.
               </span>

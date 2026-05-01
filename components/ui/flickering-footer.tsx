@@ -286,11 +286,11 @@ export function FlickeringFooter() {
                 <div className="flex flex-col items-start justify-start gap-y-4 max-w-xs">
                     <Link href="/" className="flex items-center gap-3">
                         <div className="relative grid h-10 w-10 place-items-center rounded-xl bg-foreground text-white shadow-lg">
-                            <Image src={logo} alt="Bits & Bytes Kolkata logo" width={28} height={28} className="h-6 w-6 object-contain" priority />
+                            <Image src={logo} alt="Bits&Bytes Kolkata logo" width={28} height={28} className="h-6 w-6 object-contain" priority />
                             <div className="absolute inset-0 rounded-xl border-2 border-[var(--brand-red)]" />
                         </div>
                         <div>
-                            <p className="font-display text-base font-semibold text-foreground leading-tight">Bits & Bytes Kolkata</p>
+                            <p className="font-display text-base font-semibold text-foreground leading-tight">Bits&Bytes Kolkata</p>
                             <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Teen-led</p>
                         </div>
                     </Link>
@@ -330,10 +330,10 @@ export function FlickeringFooter() {
                         <div className="flex flex-col gap-y-2">
                             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-foreground">Connect</p>
                             <a
-                                href="mailto:kolkata@bitsnbytes.org"
+                                href="mailto:kolkata@Bits&Bytes.org"
                                 className="text-foreground/70 hover:text-foreground transition-colors"
                             >
-                                kolkata@bitsnbytes.org
+                                kolkata@Bits&Bytes.org
                             </a>
                             <p className="flex items-center gap-2 text-sm text-muted-foreground">
                                 <MapPin className="h-4 w-4 shrink-0" />
@@ -383,7 +383,7 @@ export function FlickeringFooter() {
                 </div>
             </div>
             <div className="border-t border-foreground/5 text-center text-[10px] sm:text-xs py-3 sm:py-4 px-4 w-full text-muted-foreground">
-                © {new Date().getFullYear()} Bits & Bytes Kolkata. Built with club ❤️.
+                © {new Date().getFullYear()} Bits&Bytes Kolkata. Built with club ❤️.
             </div>
         </footer>
     );

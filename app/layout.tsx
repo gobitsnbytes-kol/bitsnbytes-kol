@@ -40,13 +40,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://gobitsnbytes.org"),
   manifest: "/manifest.webmanifest",
   title: {
-    default: "Bits & Bytes Kolkata",
-    template: "%s | Bits & Bytes Kolkata",
+    default: "Bits&Bytes Kolkata",
+    template: "%s | Bits&Bytes Kolkata",
   },
   description:
     "Join India's boldest teen-led code club. Build real projects, attend hackathons, and grow as a developer. 1500+ active members and 2700+ participant submissions evaluated in 3 days.",
   keywords: [
-    "Bits and Bytes",
+    "Bits&Bytes",
     "bits&bytes",
     "teen code club kolkata",
     "kolkata hackathons for students",
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     "student hackathon kolkata",
     "free coding club kolkata",
   ],
-  authors: [{ name: "Bits & Bytes Kolkata Team", url: "https://gobitsnbytes.org/about" }],
-  creator: "Bits & Bytes Kolkata",
-  publisher: "Bits & Bytes Kolkata",
+  authors: [{ name: "Bits&Bytes Kolkata Team", url: "https://gobitsnbytes.org/about" }],
+  creator: "Bits&Bytes Kolkata",
+  publisher: "Bits&Bytes Kolkata",
   formatDetection: {
     email: true,
     address: true,
@@ -94,10 +94,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://gobitsnbytes.org",
-    siteName: "Bits & Bytes Kolkata",
-    title: "Bits & Bytes Kolkata",
+    siteName: "Bits&Bytes Kolkata",
+    title: "Bits&Bytes Kolkata",
     description:
-      "Join Bits & Bytes Kolkata. Build real projects, attend hackathons, and grow as a developer.",
+      "Join Bits&Bytes Kolkata. Build real projects, attend hackathons, and grow as a developer.",
     images: [
       {
         url: "/og-image.png",
@@ -110,9 +110,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bits & Bytes Kolkata",
+    title: "Bits&Bytes Kolkata",
     description:
-      "Join Bits & Bytes Kolkata. Build real projects, attend hackathons, and grow as a developer.",
+      "Join Bits&Bytes Kolkata. Build real projects, attend hackathons, and grow as a developer.",
     images: ["/og-image.png"],
     creator: "@bitsnbytes_lko",
     site: "@bitsnbytes_lko",
@@ -143,8 +143,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "@id": "https://gobitsnbytes.org/#organization",
-    name: "Bits & Bytes Kolkata",
-    alternateName: ["Bits & Bytes Kolkata"],
+    name: "Bits&Bytes Kolkata",
+    alternateName: ["Bits&Bytes Kolkata"],
     url: "https://gobitsnbytes.org",
     logo: {
       "@type": "ImageObject",
@@ -169,7 +169,7 @@ export default function RootLayout({
     sameAs: [
       "https://www.linkedin.com/company/gobitsbytes",
       "https://github.com/BitsnBytes-Kolkata",
-      "https://twitter.com/bitsnbytes_lko",
+      "https://twitter.com/Bits&Bytes_lko",
       "https://www.instagram.com/gobitsnbytes",
     ],
     contactPoint: {
@@ -198,8 +198,8 @@ export default function RootLayout({
     "@type": "WebSite",
     "@id": "https://gobitsnbytes.org/#website",
     url: "https://gobitsnbytes.org",
-    name: "Bits & Bytes Kolkata",
-    description: "Bits & Bytes Kolkata for hackathons, workshops, and building real projects",
+    name: "Bits&Bytes Kolkata",
+    description: "Bits&Bytes Kolkata for hackathons, workshops, and building real projects",
     publisher: {
       "@id": "https://gobitsnbytes.org/#organization",
     },

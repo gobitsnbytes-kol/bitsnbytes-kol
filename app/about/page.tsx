@@ -21,14 +21,14 @@ const TeamCaseStudy = dynamic(() => import("@/components/team-case-study"), {
 });
 
 const aboutContent = {
-  title: "About Bits & Bytes Kolkata",
+  title: "About Bits&Bytes Kolkata",
   description:
     "We are a teen-led code club dedicated to empowering high-agency individuals to ship production-grade technology through real-world product launches.",
   sections: [
     {
       title: "The Origin Story",
       description:
-        "Originally hosting Daydream Kolkata under Hack Club, we faced a last-minute venue withdrawal. We decided to fork Bits & Bytes to bypass rigid formats and deliver actual value to builders.",
+        "Originally hosting Daydream Kolkata under Hack Club, we faced a last-minute venue withdrawal. We decided to fork Bits&Bytes to bypass rigid formats and deliver actual value to builders.",
     },
     {
       title: "High Agency Only",
@@ -57,7 +57,7 @@ const coreTeam: CoreTeamMember[] = [
     image: "https://avatars.githubusercontent.com/u/108920197?v=4",
     imagePosition: "center center",
     mobileImagePosition: "center center",
-    bio: "Leading the independent Bits & Bytes Kolkata, driving the mission to build high-performance, student-led tech communities across the city of joy.",
+    bio: "Leading the independent Bits&Bytes Kolkata, driving the mission to build high-performance, student-led tech communities across the city of joy.",
     expertise: [
       "Project Leadership",
       "Full-Stack Architecture",
