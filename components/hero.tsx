@@ -53,7 +53,7 @@ export default function Hero() {
               <a href="https://www.linkedin.com/company/gobitsbytes" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
                 <Linkedin size={20} className="text-white group-hover:text-[var(--brand-yellow)]" />
               </a>
-              <a href="https://www.instagram.com/Bits & Bytes.lko" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
+              <a href="https://www.instagram.com/Bits&Bytes.lko" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
                 <Twitter size={20} className="text-white group-hover:text-[var(--brand-yellow)]" />
               </a>
             </div>

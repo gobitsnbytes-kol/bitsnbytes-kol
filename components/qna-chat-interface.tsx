@@ -425,7 +425,7 @@ export function QnAChatInterface() {
         <div
             className="flex flex-col h-full w-full max-w-4xl mx-auto rounded-none sm:rounded-3xl overflow-hidden border-0 sm:border border-zinc-700/60 bg-zinc-950/70 shadow-2xl backdrop-blur-3xl relative"
             role="region"
-            aria-label="Bits and Bytes chat assistant"
+            aria-label="Bits&Bytes chat assistant"
         >
             <div className="flex flex-wrap items-center justify-between gap-3 px-6 pt-5 pb-4 border-b border-zinc-800/80 bg-zinc-900/50 shrink-0">
                 <div className="flex items-center gap-3">

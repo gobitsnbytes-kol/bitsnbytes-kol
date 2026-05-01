@@ -475,7 +475,7 @@ export default function Events() {
                         { icon: <Calendar className="h-4 w-4 text-(--brand-red)" />, label: "Date", value: "Mar 19–22, 2026" },
                         { icon: <MapPin className="h-4 w-4 text-(--brand-red)" />, label: "Venue", value: "IIT Kanpur" },
                         { icon: <Users className="h-4 w-4 text-(--brand-red)" />, label: "Team Size", value: "1–4 members" },
-                        { icon: <Building2 className="h-4 w-4 text-(--brand-red)" />, label: "Partners", value: "ByteForge, Bits & Bytes" },
+                        { icon: <Building2 className="h-4 w-4 text-(--brand-red)" />, label: "Partners", value: "ByteForge, Bits&Bytes" },
                       ].map((s) => (
                         <div key={s.label} className="flex items-center justify-between px-5 py-3.5">
                           <div className="flex items-center gap-2.5">

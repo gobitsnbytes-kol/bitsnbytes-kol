@@ -1,6 +1,6 @@
-# Bits & Bytes Kolkata
+# Bits&Bytes Kolkata
 
-Official platform for Bits & Bytes Kolkata, a teen-led coding community based in Kolkata, India. This repository powers the public website and community pages.
+Official platform for Bits&Bytes Kolkata, a teen-led coding community based in Kolkata, India. This repository powers the public website and community pages.
 
 ## What This Project Includes
 

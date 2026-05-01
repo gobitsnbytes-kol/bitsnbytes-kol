@@ -281,6 +281,7 @@ export default function FaultyTerminal({
   const frozenTimeRef = useRef(0);
   const loadAnimationStartRef = useRef(0);
   const timeOffsetRef = useRef(Math.random() * 100);
+  const isInViewRef = useRef(true);
 
   const tintVec = useMemo(() => hexToRgb(tint), [tint]);
   const ditherValue = useMemo(() => (typeof dither === "boolean" ? (dither ? 1 : 0) : dither), [dither]);
@@ -352,8 +353,24 @@ export default function FaultyTerminal({
     resizeObserver.observe(container);
     resize();
 
+    const intersectionObserver = new IntersectionObserver(
+      ([entry]) => {
+        isInViewRef.current = entry.isIntersecting;
+      },
+      { threshold: 0 },
+    );
+    intersectionObserver.observe(container);
+
+    let lastTime = 0;
     const update = (timeMs: number) => {
       rafRef.current = requestAnimationFrame(update);
+
+      if (!isInViewRef.current) return;
+
+      const delta = (timeMs - lastTime) / 1000;
+      // Cap at ~40 FPS for background shaders to save resources
+      if (delta < 0.025) return;
+      lastTime = timeMs;
 
       if (pageLoadAnimation && loadAnimationStartRef.current === 0) {
         loadAnimationStartRef.current = timeMs;
@@ -398,6 +415,7 @@ export default function FaultyTerminal({
     return () => {
       cancelAnimationFrame(rafRef.current);
       resizeObserver.disconnect();
+      intersectionObserver.disconnect();
       if (mouseReact) {
         container.removeEventListener("mousemove", handleMouseMove);
       }

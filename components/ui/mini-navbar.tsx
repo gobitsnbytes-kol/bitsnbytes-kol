@@ -134,7 +134,7 @@ export function MiniNavbar() {
                     <div className="relative h-8 w-8 flex items-center justify-center rounded-lg bg-white overflow-hidden p-1.5">
                         <Image
                             src={logo}
-                            alt="Bits & Bytes Kolkata logo"
+                            alt="Bits&Bytes Kolkata logo"
                             width={20}
                             height={20}
                             className="object-contain"

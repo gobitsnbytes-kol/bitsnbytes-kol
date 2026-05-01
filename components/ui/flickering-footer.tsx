@@ -95,34 +95,65 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
 
     const memoizedColor = useMemo(() => getRGBA(color), [color]);
 
+    const maskBufferRef = useRef<Uint8Array | null>(null);
+
     const drawGrid = useCallback(
         (ctx: CanvasRenderingContext2D, width: number, height: number, cols: number, rows: number, squares: Float32Array, dpr: number) => {
             ctx.clearRect(0, 0, width, height);
-            const maskCanvas = document.createElement("canvas");
-            maskCanvas.width = width;
-            maskCanvas.height = height;
-            const maskCtx = maskCanvas.getContext("2d", { willReadFrequently: true });
-            if (!maskCtx) return;
 
-            if (text) {
-                maskCtx.save();
-                maskCtx.scale(dpr, dpr);
-                maskCtx.fillStyle = "white";
-                maskCtx.font = `${fontWeight} ${fontSize}px "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif`;
-                maskCtx.textAlign = "center";
-                maskCtx.textBaseline = "middle";
-                maskCtx.fillText(text, width / (2 * dpr), height / (2 * dpr));
-                maskCtx.restore();
+            if (text && !maskBufferRef.current) {
+                const maskCanvas = document.createElement("canvas");
+                maskCanvas.width = width;
+                maskCanvas.height = height;
+                const maskCtx = maskCanvas.getContext("2d", { willReadFrequently: true });
+                if (maskCtx) {
+                    maskCtx.save();
+                    maskCtx.scale(dpr, dpr);
+                    maskCtx.fillStyle = "white";
+                    maskCtx.font = `${fontWeight} ${fontSize}px "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif`;
+                    maskCtx.textAlign = "center";
+                    maskCtx.textBaseline = "middle";
+                    maskCtx.fillText(text, width / (2 * dpr), height / (2 * dpr));
+                    maskCtx.restore();
+                    const imageData = maskCtx.getImageData(0, 0, width, height);
+                    maskBufferRef.current = new Uint8Array(imageData.data.buffer);
+                }
             }
+
+            const maskBuffer = maskBufferRef.current;
 
             for (let i = 0; i < cols; i++) {
                 for (let j = 0; j < rows; j++) {
-                    const x = i * (squareSize + gridGap) * dpr;
-                    const y = j * (squareSize + gridGap) * dpr;
-                    const squareWidth = squareSize * dpr;
-                    const squareHeight = squareSize * dpr;
-                    const maskData = maskCtx.getImageData(x, y, squareWidth, squareHeight).data;
-                    const hasText = maskData.some((value, index) => index % 4 === 0 && value > 0);
+                    const x = Math.floor(i * (squareSize + gridGap) * dpr);
+                    const y = Math.floor(j * (squareSize + gridGap) * dpr);
+                    const squareWidth = Math.floor(squareSize * dpr);
+                    const squareHeight = Math.floor(squareSize * dpr);
+
+                    let hasText = false;
+                    if (maskBuffer) {
+                        // Check a few points in the square to see if there is text
+                        // Checking just the center and corners is usually enough and much faster
+                        const checkPoints = [
+                            [x + squareWidth / 2, y + squareHeight / 2],
+                            [x, y],
+                            [x + squareWidth - 1, y],
+                            [x, y + squareHeight - 1],
+                            [x + squareWidth - 1, y + squareHeight - 1],
+                        ];
+
+                        for (const [px, py] of checkPoints) {
+                            const pixelX = Math.floor(px);
+                            const pixelY = Math.floor(py);
+                            if (pixelX >= 0 && pixelX < width && pixelY >= 0 && pixelY < height) {
+                                const index = (pixelY * width + pixelX) * 4;
+                                if (maskBuffer[index] > 0) {
+                                    hasText = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
                     const opacity = squares[i * rows + j];
                     const finalOpacity = hasText ? Math.min(1, opacity * 3 + 0.4) : opacity;
                     ctx.fillStyle = colorWithOpacity(memoizedColor, finalOpacity);
@@ -176,6 +207,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
             const newWidth = width || container.clientWidth;
             const newHeight = height || container.clientHeight;
             setCanvasSize({ width: newWidth, height: newHeight });
+            maskBufferRef.current = null; // Invalidate mask on resize
             gridParams = setupCanvas(canvas, newWidth, newHeight);
         };
         updateCanvasSize();
@@ -184,6 +216,13 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
         const animate = (time: number) => {
             if (!isInView) return;
             const deltaTime = (time - lastTime) / 1000;
+
+            // Limit to ~30 FPS to save battery/CPU on background animations
+            if (deltaTime < 0.03) {
+                animationFrameId = requestAnimationFrame(animate);
+                return;
+            }
+
             lastTime = time;
             updateSquares(gridParams.squares, deltaTime);
             drawGrid(ctx, canvas.width, canvas.height, gridParams.cols, gridParams.rows, gridParams.squares, gridParams.dpr);
@@ -239,6 +278,7 @@ const footerLinks = [
 
 export function FlickeringFooter() {
     const tablet = useMediaQuery("(max-width: 1024px)");
+    const mobile = useMediaQuery("(max-width: 640px)");
 
     return (
         <footer id="footer" className="w-full pb-0 mt-12 sm:mt-16 border-t border-foreground/10 bg-white/70 backdrop-blur-xl">
@@ -246,11 +286,11 @@ export function FlickeringFooter() {
                 <div className="flex flex-col items-start justify-start gap-y-4 max-w-xs">
                     <Link href="/" className="flex items-center gap-3">
                         <div className="relative grid h-10 w-10 place-items-center rounded-xl bg-foreground text-white shadow-lg">
-                            <Image src={logo} alt="Bits & Bytes Kolkata logo" width={28} height={28} className="h-6 w-6 object-contain" priority />
+                            <Image src={logo} alt="Bits&Bytes Kolkata logo" width={28} height={28} className="h-6 w-6 object-contain" priority />
                             <div className="absolute inset-0 rounded-xl border-2 border-[var(--brand-red)]" />
                         </div>
                         <div>
-                            <p className="font-display text-base font-semibold text-foreground leading-tight">Bits & Bytes Kolkata</p>
+                            <p className="font-display text-base font-semibold text-foreground leading-tight">Bits&Bytes Kolkata</p>
                             <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Teen-led</p>
                         </div>
                     </Link>
@@ -290,10 +330,10 @@ export function FlickeringFooter() {
                         <div className="flex flex-col gap-y-2">
                             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-foreground">Connect</p>
                             <a
-                                href="mailto:kolkata@bitsnbytes.org"
+                                href="mailto:kolkata@Bits&Bytes.org"
                                 className="text-foreground/70 hover:text-foreground transition-colors"
                             >
-                                kolkata@bitsnbytes.org
+                                kolkata@Bits&Bytes.org
                             </a>
                             <p className="flex items-center gap-2 text-sm text-muted-foreground">
                                 <MapPin className="h-4 w-4 shrink-0" />
@@ -306,16 +346,18 @@ export function FlickeringFooter() {
             <div className="w-full h-24 sm:h-32 md:h-48 relative mt-8 z-0">
                 <div className="absolute inset-0 bg-gradient-to-t from-transparent to-background z-10 from-40%" />
                 <div className="absolute inset-0 mx-4">
-                    <FlickeringGrid
-                        text={tablet ? "KOL" : "KOLKATA"}
-                        fontSize={tablet ? 40 : 60}
-                        className="absolute inset-0 h-full w-full"
-                        squareSize={2}
-                        gridGap={tablet ? 2 : 3}
-                        color="var(--brand-blue)"
-                        maxOpacity={0.25}
-                        flickerChance={0.09}
-                    />
+                    {!mobile && (
+                        <FlickeringGrid
+                            text={tablet ? "KOL" : "KOLKATA"}
+                            fontSize={tablet ? 40 : 60}
+                            className="absolute inset-0 h-full w-full"
+                            squareSize={2}
+                            gridGap={tablet ? 2 : 3}
+                            color="var(--brand-blue)"
+                            maxOpacity={0.25}
+                            flickerChance={0.09}
+                        />
+                    )}
                     <FlickeringGrid
                         text={tablet ? "KOL" : "KOLKATA"}
                         fontSize={tablet ? 40 : 60}
@@ -324,22 +366,24 @@ export function FlickeringFooter() {
                         gridGap={tablet ? 2 : 3}
                         color="var(--brand-red)"
                         maxOpacity={0.15}
-                        flickerChance={0.05}
+                        flickerChance={mobile ? 0.03 : 0.05}
                     />
-                    <FlickeringGrid
-                        text={tablet ? "KOL" : "KOLKATA"}
-                        fontSize={tablet ? 40 : 60}
-                        className="absolute inset-0 h-full w-full"
-                        squareSize={2}
-                        gridGap={tablet ? 2 : 3}
-                        color="var(--brand-yellow)"
-                        maxOpacity={0.2}
-                        flickerChance={0.12}
-                    />
+                    {!mobile && (
+                        <FlickeringGrid
+                            text={tablet ? "KOL" : "KOLKATA"}
+                            fontSize={tablet ? 40 : 60}
+                            className="absolute inset-0 h-full w-full"
+                            squareSize={2}
+                            gridGap={tablet ? 2 : 3}
+                            color="var(--brand-yellow)"
+                            maxOpacity={0.2}
+                            flickerChance={0.12}
+                        />
+                    )}
                 </div>
             </div>
             <div className="border-t border-foreground/5 text-center text-[10px] sm:text-xs py-3 sm:py-4 px-4 w-full text-muted-foreground">
-                © {new Date().getFullYear()} Bits & Bytes Kolkata. Built with club ❤️.
+                © {new Date().getFullYear()} Bits&Bytes Kolkata. Built with club ❤️.
             </div>
         </footer>
     );

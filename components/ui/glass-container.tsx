@@ -19,7 +19,7 @@ export function GlassContainer({
     return (
         <div className={cn(
             "group relative overflow-hidden rounded-2xl sm:rounded-3xl md:rounded-[2.5rem] border border-white/10 bg-white/5 p-1.5 sm:p-2 transition-transform transition-colors transition-opacity duration-500 hover:border-white/20 hover:bg-white/10",
-            "md:backdrop-blur-xl", // Only apply blur on larger screens for mobile performance
+            "backdrop-blur-sm md:backdrop-blur-xl", // Reduced blur on mobile for performance
             containerClassName
         )}>
             {/* Reflective top edge */}
@@ -27,6 +27,7 @@ export function GlassContainer({
 
             <div className={cn(
                 "relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-[2.25rem] border border-(--brand-off-white)/20 bg-white/10",
+                "backdrop-blur-sm md:backdrop-blur-md", // Added subtle blur to nested layer
                 className
             )}>
                 {/* Animated glass shine */}

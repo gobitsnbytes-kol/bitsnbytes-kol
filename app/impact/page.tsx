@@ -42,7 +42,7 @@ const highlightStats = [
   {
     value: "2,700",
     label: "Submissions Evaluated",
-    description: "Reviewed by Bits & Bytes Kolkata team in a 3-day sprint",
+    description: "Reviewed by Bits&Bytes Kolkata team in a 3-day sprint",
     timeframe: "3 days ↑",
   },
   {
