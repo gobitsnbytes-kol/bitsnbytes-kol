@@ -103,13 +103,15 @@ export function MiniNavbar() {
                      transition-transform transition-colors transition-opacity duration-300 ease-out
                      group-hover:opacity-40 group-hover:blur-xl group-hover:-m-3"
             ></div>
-            <Link
-                href="/join"
+            <a
+                href="https://gusty-servant-a11.notion.site/357d1148777a8007af72ee9b4a54546a?pvs=105"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative z-10 flex items-center justify-center gap-1.5 px-5 py-2 text-xs font-black text-white bg-[var(--brand-red)] rounded-full hover:brightness-110 active:scale-95 transition-transform transition-colors transition-opacity duration-200 w-full md:w-auto"
             >
                 Join Now
                 <ArrowUpRight className="w-3.5 h-3.5" />
-            </Link>
+            </a>
         </div>
     );
 

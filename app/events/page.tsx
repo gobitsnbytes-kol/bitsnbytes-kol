@@ -135,7 +135,7 @@ export default function Events() {
           <PageSection
             eyebrow="Archived · Apr 19, 2026"
             title="Lucknow Build Guild"
-            description="Free hardware workshop and meetup in Kolkata."
+            description="Free hardware workshop and meetup in Lucknow."
           >
             <GlassContainer glowColor="pink" animated={false} className="overflow-hidden">
 
@@ -146,7 +146,7 @@ export default function Events() {
                     <Building2 className="h-12 w-12 text-(--brand-red)" />
                   </div>
                   <h3 className="text-2xl font-black tracking-tight text-foreground mb-2">Lucknow Build Guild</h3>
-                  <p className="text-foreground/60 font-medium">Free hardware workshop and meetup in Kolkata.</p>
+                  <p className="text-foreground/60 font-medium">Free hardware workshop and meetup in Lucknow.</p>
                 </div>
               </div>
 

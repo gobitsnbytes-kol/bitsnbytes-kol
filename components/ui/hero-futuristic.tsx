@@ -29,11 +29,11 @@ const heroEvents = [
   {
     image: "/images/github-copilot-hero-desktop.png",
     imageMobile: "/images/github-copilot-hero-mobile.png",
-    alt: "Execron 1.0 | Lucknow",
+    alt: "Execron 1.0 | IIT Kanpur",
     badge: "Recent Event",
     status: "archived",
     title: "Execron 1.0",
-    subtitle: "AI Hackathon · Kolkata",
+    subtitle: "AI Hackathon · IIT Kanpur",
     href: "/events",
   },
   {
