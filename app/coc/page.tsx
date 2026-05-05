@@ -294,10 +294,10 @@ export default function CodeOfConduct() {
                   <div className="text-center md:text-left">
                     <p className="text-sm text-foreground/50 font-bold uppercase tracking-[0.2em] mb-1">Email us at</p>
                     <a
-                      href="mailto:kolkata@Bits&Bytes.org"
+                      href="mailto:kolkata@gobitsnbytes.org"
                       className="text-2xl md:text-3xl font-black text-foreground hover:text-(--brand-red) transition-colors tracking-tighter"
                     >
-                      kolkata@Bits&Bytes.org
+                      kolkata@gobitsnbytes.org
                     </a>
                   </div>
                 </div>

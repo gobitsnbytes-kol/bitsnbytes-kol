@@ -278,7 +278,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
-                        <strong>GitHub Copilot Dev Days</strong> was a community developer event in <strong>Lucknow</strong> that brought together students, developers, and technology enthusiasts to explore how AI-assisted development works in real projects.
+                        <strong>GitHub Copilot Dev Days</strong> was a community developer event in <strong>Kolkata</strong> that brought together students, developers, and technology enthusiasts to explore how AI-assisted development works in real projects.
                       </p>
                     </div>
 
@@ -295,7 +295,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Partners & Details</h2>
                       <p>
-                        The event was hosted by <strong>Bits&Bytes</strong>, with community partners including <strong>Coding Connoisseurs</strong>, <strong>Aryan Singh</strong>, and <strong>Notion Lucknow</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
+                        The event was hosted by <strong>Bits&Bytes</strong>, with community partners including <strong>Coding Connoisseurs</strong> and <strong>Notion Kolkata</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
                       </p>
                     </div>
                   </div>

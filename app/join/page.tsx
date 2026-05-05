@@ -26,7 +26,7 @@ const WebGLShader = dynamic(
 );
 
 const NOTION_JOIN_FORM_URL =
-  "https://perfect-dinghy-781.notion.site/33949ed2fc338035bd3bef46155035f5?pvs=105";
+  "https://gusty-servant-a11.notion.site/352d1148777a808ebd28f77a7875a0e6?pvs=105";
 
 const benefits = [
   {
@@ -262,10 +262,10 @@ export default function Join() {
             <p className="text-xs sm:text-sm text-foreground/60">
               Questions? Reach us at{" "}
               <a
-                href="mailto:kolkata@Bits&Bytes.org"
+                href="mailto:kolkata@gobitsnbytes.org"
                 className="font-bold text-[var(--brand-red)] hover:underline"
               >
-                kolkata@Bits&Bytes.org
+                kolkata@gobitsnbytes.org
               </a>
             </p>
           </div>

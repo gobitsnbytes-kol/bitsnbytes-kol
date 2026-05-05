@@ -253,8 +253,8 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
 
 const socialLinks = [
     { href: "https://www.linkedin.com/company/gobitsbytes", label: "LinkedIn", icon: Linkedin },
-    { href: "https://github.com/BitsnBytes-Kolkata", label: "GitHub", icon: Github },
-    { href: "https://www.instagram.com/gobitsnbytes", label: "Instagram", icon: Instagram },
+    { href: "https://github.com/gobitsnbytes-kol", label: "GitHub", icon: Github },
+    { href: "https://www.instagram.com/gobitsnbytes.kolkata", label: "Instagram", icon: Instagram },
 ];
 
 const footerLinks = [
@@ -330,10 +330,10 @@ export function FlickeringFooter() {
                         <div className="flex flex-col gap-y-2">
                             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-foreground">Connect</p>
                             <a
-                                href="mailto:kolkata@Bits&Bytes.org"
+                                href="mailto:kolkata@gobitsnbytes.org"
                                 className="text-foreground/70 hover:text-foreground transition-colors"
                             >
-                                kolkata@Bits&Bytes.org
+                                kolkata@gobitsnbytes.org
                             </a>
                             <p className="flex items-center gap-2 text-sm text-muted-foreground">
                                 <MapPin className="h-4 w-4 shrink-0" />

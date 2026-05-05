@@ -193,7 +193,7 @@ export default function FAQ() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
                 asChild
-                className="group rounded-full bg-(--brand-red) px-10 py-7 text-lg font-black text-white shadow-lg shadow-[#e45a92]/20 hover:shadow-xl hover:shadow-[#e45a92]/40 transition-transform transition-colors transition-opacity hover:scale-105 w-full sm:w-auto"
+                className="group rounded-full bg-(--brand-red) px-10 py-7 text-lg font-black text-white shadow-lg shadow-[#C5312E]/20 hover:shadow-xl hover:shadow-[#C5312E]/40 transition-transform transition-colors transition-opacity hover:scale-105 w-full sm:w-auto"
               >
                 <Link href="/contact">
                   Contact Us

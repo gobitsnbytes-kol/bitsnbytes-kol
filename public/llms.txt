@@ -57,7 +57,7 @@ Kolkata fork of Bits&Bytes is a teen-led code club and nonprofit, based in Kolka
   1. Warning/Apology
   2. Temporary Ban
   3. Permanent Removal
-- **Reporting**: email `kolkata@bitsnbytes.org` or message a team member. 100% confidential. Applies to all events, online spaces, projects, and social media.
+- **Reporting**: email `kolkata@gobitsnbytes.org` or message a team member. 100% confidential. Applies to all events, online spaces, projects, and social media.
 
 ## Website Structure
 - **/** - Homepage with overview and impact stats
@@ -71,11 +71,11 @@ Kolkata fork of Bits&Bytes is a teen-led code club and nonprofit, based in Kolka
 
 ## Contact Information
 - **Website**: https://gobitsnbytes.org
-- **Email**: kolkata@bitsnbytes.org
+- **Email**: kolkata@gobitsnbytes.org
 - **Contact Page**: https://gobitsnbytes.org/contact
 - **LinkedIn**: https://www.linkedin.com/company/gobitsbytes
-- **GitHub**: https://github.com/BitsnBytes-Kolkata
-- **Twitter/X**: @bitsnbytes_lko
+- **GitHub**: https://github.com/gobitsnbytes-kol
+- **Instagram**: https://www.instagram.com/gobitsnbytes.kolkata
 - **Location**: Kolkata, West Bengal, India
 
 ## Brand Colors

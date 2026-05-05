@@ -29,11 +29,11 @@ const heroEvents = [
   {
     image: "/images/github-copilot-hero-desktop.png",
     imageMobile: "/images/github-copilot-hero-mobile.png",
-    alt: "GitHub Copilot Dev Days | Lucknow",
-    badge: "Upcoming Event",
-    status: "upcoming",
-    title: "GitHub Copilot Dev Days",
-    subtitle: "Coming Soon · Lucknow",
+    alt: "Execron 1.0 | IIT Kanpur",
+    badge: "Recent Event",
+    status: "archived",
+    title: "Execron 1.0",
+    subtitle: "AI Hackathon · IIT Kanpur",
     href: "/events",
   },
   {
@@ -94,7 +94,7 @@ export const HeroFuturistic = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col gap-4 sm:flex-row w-full mt-2">
+              <div className="flex flex-col gap-3 sm:flex-row flex-wrap w-full mt-2">
                 <Button
                   asChild
                   className="w-full sm:flex-1 h-12 sm:h-14 px-6 sm:px-8 rounded-full bg-(--brand-red) text-sm sm:text-base font-bold text-white shadow-[0_0_30px_rgba(197,49,46,0.5)] hover:shadow-[0_0_50px_rgba(197,49,46,0.7)] transition-transform transition-colors transition-opacity hover:scale-[1.02] active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/20"
@@ -103,6 +103,20 @@ export const HeroFuturistic = () => {
                     Join the crew
                     <ArrowRight className="h-5 w-5 shrink-0" />
                   </Link>
+                </Button>
+                <Button
+                  asChild
+                  className="w-full sm:flex-1 h-12 sm:h-14 px-6 sm:px-8 rounded-full bg-(--brand-red) text-sm sm:text-base font-bold text-white shadow-[0_0_30px_rgba(197,49,46,0.5)] hover:shadow-[0_0_50px_rgba(197,49,46,0.7)] transition-transform transition-colors transition-opacity hover:scale-[1.02] active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black/20"
+                >
+                  <a
+                    href="https://gusty-servant-a11.notion.site/357d1148777a8007af72ee9b4a54546a?pvs=105"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2"
+                  >
+                    Join Community
+                    <ArrowRight className="h-5 w-5 shrink-0" />
+                  </a>
                 </Button>
                 <Button
                   asChild

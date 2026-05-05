@@ -30,10 +30,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is Bits&Bytes?",
+      name: "What is Bits&Bytes Kolkata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Bits&Bytes is a student-led tech club that runs hackathons and other events. Our hackathons follow the usual format but aren't traditional—we have some inspirations from Hack Club style hackathons. Our focus is on creativity; lots of attendees are newer to coding.",
+        text: "Bits&Bytes Kolkata is a student-led tech club that runs hackathons and other events. Our hackathons follow the usual format but aren't traditional—we have some inspirations from Hack Club style hackathons. Our focus is on creativity; lots of attendees are newer to coding.",
       },
     },
     {
@@ -46,10 +46,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Is there a membership fee to join Bits&Bytes?",
+      name: "Is there a membership fee to join Bits&Bytes Kolkata?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Bits&Bytes is completely free to join. We believe tech education should be accessible to all students.",
+        text: "Bits&Bytes Kolkata is completely free to join. We believe tech education should be accessible to all students.",
       },
     },
     {

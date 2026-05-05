@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react"
 import { TextGlitch } from "@/components/ui/text-glitch-effect"
 import { ShaderAnimation } from "@/components/ui/shader-animation"
 
@@ -36,6 +36,14 @@ export default function Hero() {
               >
                 Join Us Now <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
+              <a
+                href="https://gusty-servant-a11.notion.site/357d1148777a8007af72ee9b4a54546a?pvs=105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-3 bg-[var(--brand-red)] text-white rounded-full font-medium hover:opacity-90 transition-all hover:shadow-lg hover:shadow-[var(--brand-red)]/30 group"
+              >
+                Join Community
+              </a>
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white rounded-full font-medium hover:bg-white/10 transition-colors"
@@ -47,14 +55,14 @@ export default function Hero() {
             {/* Social Links */}
             <div className="flex items-center gap-6">
               <span className="text-sm text-white/70">Follow us:</span>
-              <a href="https://github.com/BitsnBytes-Kolkata" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
+              <a href="https://github.com/gobitsnbytes-kol" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
                 <Github size={20} className="text-white group-hover:text-[var(--brand-yellow)]" />
               </a>
               <a href="https://www.linkedin.com/company/gobitsbytes" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
                 <Linkedin size={20} className="text-white group-hover:text-[var(--brand-yellow)]" />
               </a>
-              <a href="https://www.instagram.com/Bits&Bytes.lko" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
-                <Twitter size={20} className="text-white group-hover:text-[var(--brand-yellow)]" />
+              <a href="https://www.instagram.com/gobitsnbytes.kolkata" target="_blank" rel="noopener noreferrer" className="p-2 hover:bg-white/10 rounded-full transition-colors group">
+                <Instagram size={20} className="text-white group-hover:text-[var(--brand-yellow)]" />
               </a>
             </div>
           </div>

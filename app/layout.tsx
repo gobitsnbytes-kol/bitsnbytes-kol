@@ -114,8 +114,6 @@ export const metadata: Metadata = {
     description:
       "Join Bits&Bytes Kolkata. Build real projects, attend hackathons, and grow as a developer.",
     images: ["/og-image.png"],
-    creator: "@bitsnbytes_lko",
-    site: "@bitsnbytes_lko",
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || "google-site-verification-code",
@@ -168,9 +166,8 @@ export default function RootLayout({
     },
     sameAs: [
       "https://www.linkedin.com/company/gobitsbytes",
-      "https://github.com/BitsnBytes-Kolkata",
-      "https://twitter.com/Bits&Bytes_lko",
-      "https://www.instagram.com/gobitsnbytes",
+      "https://github.com/gobitsnbytes-kol",
+      "https://www.instagram.com/gobitsnbytes.kolkata",
     ],
     contactPoint: {
       "@type": "ContactPoint",
