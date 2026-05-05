@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     title: "QnA Assistant | Bits&Bytes AI",
     description: "Chat with the official Bits&Bytes AI assistant powered by advanced language models.",
     images: ["/og-image.png"],
-    creator: "@bitsnbytes_lko",
   },
 };
 

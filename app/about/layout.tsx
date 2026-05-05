@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: [
     "about bits and bytes",
     "teen code club india",
-    "lucknow coding club",
+    "kolkata coding club",
     "student developers team",
     "youth tech organization india",
     "teen programmers community",

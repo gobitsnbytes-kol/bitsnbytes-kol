@@ -28,8 +28,8 @@ export default function TextGlitchDemo() {
             </h2>
             <TextGlitch
               text="VISIT US"
-              hoverText="LUCKNOW.CODES"
-              href="https://www.lucknow.codes/"
+              hoverText="GOBITSNBYTES.ORG"
+              href="https://gobitsnbytes.org"
               delay={0.4}
             />
           </div>

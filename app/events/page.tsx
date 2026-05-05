@@ -135,7 +135,7 @@ export default function Events() {
           <PageSection
             eyebrow="Archived · Apr 19, 2026"
             title="Lucknow Build Guild"
-            description="Free hardware workshop and meetup in Lucknow."
+            description="Free hardware workshop and meetup in Kolkata."
           >
             <GlassContainer glowColor="pink" animated={false} className="overflow-hidden">
 
@@ -146,7 +146,7 @@ export default function Events() {
                     <Building2 className="h-12 w-12 text-(--brand-red)" />
                   </div>
                   <h3 className="text-2xl font-black tracking-tight text-foreground mb-2">Lucknow Build Guild</h3>
-                  <p className="text-foreground/60 font-medium">Free hardware workshop and meetup in Lucknow.</p>
+                  <p className="text-foreground/60 font-medium">Free hardware workshop and meetup in Kolkata.</p>
                 </div>
               </div>
 
@@ -278,7 +278,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Event Summary</h2>
                       <p>
-                        <strong>GitHub Copilot Dev Days</strong> was a community developer event in <strong>Lucknow</strong> that brought together students, developers, and technology enthusiasts to explore how AI-assisted development works in real projects.
+                        <strong>GitHub Copilot Dev Days</strong> was a community developer event in <strong>Kolkata</strong> that brought together students, developers, and technology enthusiasts to explore how AI-assisted development works in real projects.
                       </p>
                     </div>
 
@@ -295,7 +295,7 @@ export default function Events() {
                     <div>
                       <h2 className="text-xl font-bold text-foreground mb-2">Partners & Details</h2>
                       <p>
-                        The event was hosted by <strong>Bits&Bytes</strong>, with community partners including <strong>Coding Connoisseurs</strong>, <strong>Aryan Singh</strong>, and <strong>Notion Lucknow</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
+                        The event was hosted by <strong>Bits&Bytes</strong>, with community partners including <strong>Coding Connoisseurs</strong> and <strong>Notion Kolkata</strong>. All participants observed the official <Link href="https://www.microsoft.com/en-us/events/code-of-conduct" target="_blank" rel="noopener noreferrer" className="text-(--brand-red) hover:underline underline-offset-2">GitHub Event Code of Conduct</Link>.
                       </p>
                     </div>
                   </div>

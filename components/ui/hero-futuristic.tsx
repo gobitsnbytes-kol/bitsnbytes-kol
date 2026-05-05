@@ -29,11 +29,11 @@ const heroEvents = [
   {
     image: "/images/github-copilot-hero-desktop.png",
     imageMobile: "/images/github-copilot-hero-mobile.png",
-    alt: "GitHub Copilot Dev Days | Lucknow",
-    badge: "Upcoming Event",
-    status: "upcoming",
-    title: "GitHub Copilot Dev Days",
-    subtitle: "Coming Soon · Lucknow",
+    alt: "Execron 1.0 | Lucknow",
+    badge: "Recent Event",
+    status: "archived",
+    title: "Execron 1.0",
+    subtitle: "AI Hackathon · Kolkata",
     href: "/events",
   },
   {

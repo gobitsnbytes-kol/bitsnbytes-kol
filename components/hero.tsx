@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight, Github, Linkedin, Instagram, Twitter } from "lucide-react"
+import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react"
 import { TextGlitch } from "@/components/ui/text-glitch-effect"
 import { ShaderAnimation } from "@/components/ui/shader-animation"
 
