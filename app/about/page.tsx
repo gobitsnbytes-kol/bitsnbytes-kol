@@ -28,7 +28,7 @@ const aboutContent = {
     {
       title: "The Origin Story",
       description:
-        "Originally hosting Daydream Kolkata under Hack Club, we faced a last-minute venue withdrawal. We decided to fork Bits&Bytes to bypass rigid formats and deliver actual value to builders.",
+        "After competing in a national-level competition and discovering the Bits&Bytes fork program, our lead realized that Kolkata lacked a real platform for student builders. He decided to fork Bits&Bytes to fill this gap, bringing world-class tech events and a high-agency culture to the city.",
     },
     {
       title: "High Agency Only",

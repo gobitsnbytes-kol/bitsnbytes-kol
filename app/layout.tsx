@@ -168,9 +168,9 @@ export default function RootLayout({
     },
     sameAs: [
       "https://www.linkedin.com/company/gobitsbytes",
-      "https://github.com/BitsnBytes-Kolkata",
+      "https://github.com/gobitsnbytes-kol",
       "https://twitter.com/Bits&Bytes_lko",
-      "https://www.instagram.com/gobitsnbytes",
+      "https://www.instagram.com/gobitsnbytes.kolkata",
     ],
     contactPoint: {
       "@type": "ContactPoint",

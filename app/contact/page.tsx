@@ -119,7 +119,7 @@ export default function Contact() {
                   <h3 className="font-display text-2xl font-black text-foreground mb-6">Get in Touch</h3>
                   <div className="space-y-8 max-w-full">
                     {[
-                      { icon: Mail, label: "Email", value: "kolkata@Bits&Bytes.org", href: "mailto:kolkata@Bits&Bytes.org", color: "text-(--brand-red)" },
+                      { icon: Mail, label: "Email", value: "kolkata@gobitsnbytes.org", href: "mailto:kolkata@gobitsnbytes.org", color: "text-(--brand-red)" },
                       { icon: MapPin, label: "Location", value: "Kolkata, India", color: "text-(--brand-blue)" },
                       { icon: Clock, label: "Established", value: "Teen-led since 2025", color: "text-blue-400" },
                     ].map((info) => (
@@ -236,9 +236,9 @@ export default function Contact() {
               <p className="text-sm font-black uppercase tracking-[0.3em] text-foreground/50 mb-8">Connect with us</p>
               <div className="flex flex-wrap items-center justify-center gap-6">
                 {[
-                  { icon: Github, label: "GitHub", href: "https://github.com/BitsnBytes-Kolkata" },
+                  { icon: Github, label: "GitHub", href: "https://github.com/gobitsnbytes-kol" },
                   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/gobitsbytes" },
-                  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/Bits&Byteskol" },
+                  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/gobitsnbytes.kolkata" },
                 ].map((social) => (
                   <Link
                     key={social.label}

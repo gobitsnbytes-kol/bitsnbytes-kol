@@ -60,7 +60,7 @@ const projects: Project[] = [
     team: ["Akshat Singh Kushwaha", "Aadrika Maurya", "Devansh"],
     links: {
       live: "https://gobitsnbytes.org",
-      github: "https://github.com/BitsnBytes-Kolkata/website",
+      github: "https://github.com/gobitsnbytes-kol/bitsnbytes-kol",
     },
     featured: true,
   },
@@ -88,7 +88,7 @@ const projects: Project[] = [
     tags: ["Python", "OpenAI", "FastAPI", "React"],
     team: ["Saksham", "Akshat Singh Kushwaha"],
     links: {
-      github: "https://github.com/BitsnBytes-Kolkata/studybuddy",
+      github: "https://github.com/gobitsnbytes-kol/studybuddy",
     },
   },
   {
@@ -111,7 +111,7 @@ const projects: Project[] = [
     tags: ["Next.js", "GitHub API", "Chart.js"],
     team: ["Devansh", "Areeb"],
     links: {
-      github: "https://github.com/BitsnBytes-Kolkata/devmetrics",
+      github: "https://github.com/gobitsnbytes-kol/devmetrics",
     },
   },
   {
