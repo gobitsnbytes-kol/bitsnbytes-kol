@@ -6,11 +6,15 @@ export const ROUTES = [
   { path: '/join',    page: 'join',    name: 'Join',    bn: 'যোগ দাও',  no: '04' },
   { path: '/contact', page: 'contact', name: 'Contact', bn: 'নমস্কার',   no: '05' },
 ];
+// detail pages: routable, but not in the nav rail
+const DETAILS = [
+  { path: '/events/overclock', page: 'overclock', name: 'Events', bn: 'ইভেন্ট', no: '03' },
+];
 const NOT_FOUND = { path: null, page: '404', name: 'Lost', bn: 'ভুল পথ', no: '404' };
 
 const clean = p => p.replace(/\/index\.html$/, '/').replace(/(.)\/+$/, '$1');
-export const routeFor = pathname => ROUTES.find(r => r.path === clean(pathname)) || NOT_FOUND;
-export const nextRoute = route => ROUTES[(ROUTES.indexOf(route) + 1) % ROUTES.length];
+export const routeFor = pathname => [...ROUTES, ...DETAILS].find(r => r.path === clean(pathname)) || NOT_FOUND;
+export const nextRoute = route => ROUTES[((ROUTES.indexOf(route) < 0 ? 2 : ROUTES.indexOf(route)) + 1) % ROUTES.length];
 
 const cache = new Map();
 function load(route) {

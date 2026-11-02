@@ -590,11 +590,11 @@ function departures(page) {
   const board = createSplitFlap($('.departures__board', page), {
     cols: narrow ? 14 : 22, rows: 5,
     pages: narrow
-      ? [['BITS&BYTES', 'KOLKATA', '', 'NEXT EVENT', 'TBA'], ['', 'WE ARE', 'COOKING', 'SOMETHING', 'HERE'], ['', 'JOIN THE', 'ADDA TO', 'BOARD FIRST', '']]
-      : [['BITS&BYTES KOLKATA', '', 'NEXT DEPARTURE', '', 'TO BE ANNOUNCED'],
-         ['', 'NO EVENTS LISTED', '', 'WE ARE COOKING', 'SOMETHING HERE'],
-         ['', 'JOIN THE ADDA', 'TO BOARD FIRST', '', '']],
-    accentWords: ['ANNOUNCED', 'TBA', 'COOKING', 'ADDA'],
+      ? [['NEXT DEPARTURE', '', 'OVERCLOCK', 'KOLKATA ZONAL', ''], ['', 'NOV-DEC', '8 AM TO 8 PM', '12 HRS', 'DATE TBA'], ['', 'WINNERS GO', 'TO THE FINAL', 'IIT BOMBAY', '']]
+      : [['NEXT DEPARTURE', '', 'OVERCLOCK KOLKATA ZONAL', '', 'PAST THE REDLINE'],
+         ['', 'NOV-DEC  12 HRS', '8 AM TO 8 PM', '', 'DATE TO BE ANNOUNCED'],
+         ['', 'WINNERS GO TO', 'THE FINAL AT', 'IIT BOMBAY', '']],
+    accentWords: ['OVERCLOCK', 'REDLINE', 'NOV-DEC', 'TBA', 'ANNOUNCED', 'BOMBAY'],
     ink: C.rice, accent: C.taxi, tile: '#1b1a22',
     autoplay: !reduced, playWhenVisible: true, loop: true, startDelay: 150, flipDuration: 55,
   });
@@ -686,7 +686,7 @@ function sayhi(page, intro) {
 /* ---------- generic reveals ---------- */
 function reveals(page) {
   if (reduced) return;
-  const groups = ['.plate', '.hoardings article', '.chan', '.events__side .pass', '.departures', '.stops li', '.join__lower > *']
+  const groups = ['.plate', '.event', '.ov__card', '.ov__contact', '.ov__dl .pass', '.hoardings article', '.chan', '.events__side .pass', '.departures', '.stops li', '.join__lower > *']
     .map(s => $$(s, page).filter(el => !el.closest('.mast')));
   groups.forEach(els => {
     if (!els.length) return;
